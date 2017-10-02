@@ -1,5 +1,6 @@
 <?php 
 
+/* huruf awal kelas usahakan besar, karena di server production case sensitif */
 class V1 extends CI_Controller {
 
 	public function __construct() {
@@ -15,6 +16,9 @@ class V1 extends CI_Controller {
 	public function page($p="default") {
 		$this->load->view("public/header");
 		switch($p) {
+			case "contoh-view" :
+				$this->load->view("contoh-view");
+			break;
 			case "about-us" :
 				$this->load->view("about-us");
 			break;
