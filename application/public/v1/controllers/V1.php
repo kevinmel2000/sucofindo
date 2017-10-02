@@ -20,7 +20,7 @@ class V1 extends CI_Controller {
 				$this->load->view("contoh-view");
 			break;
 			case "contoh-viewblink" :
-				$this->load->view("contoh-tesambildata");
+				$this->load->view("contoh-tesdata");
 			break;
 			case "about-us" :
 				$this->load->view("about-us");

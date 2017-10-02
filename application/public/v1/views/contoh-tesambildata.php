@@ -1,1 +1,0 @@
-<?php echo "wiblink tester'ss"; ?>
