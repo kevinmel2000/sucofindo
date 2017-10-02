@@ -34,7 +34,7 @@ class V1 extends CI_Controller {
 				$this->load->view("client-room",$data);
 			break;
 			default :
-				echo "Sorry, page not found!";
+				$this->load->view("error-404");
 			break;
 		}
 		$this->load->view("public/footer");
