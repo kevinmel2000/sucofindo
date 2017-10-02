@@ -3,8 +3,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
+
 							<h4 class="color_dark fw_light m_bottom_15 heading_1">Client Room</h4>
 							<hr class="m_bottom_10">
+
 							<form method="post" action="<?php echo base_url(); ?>index.php/v1/client_auth" id="form_1" class="fw_light">
 								<ul>
 									<li class="m_bottom_10 m_xs_bottom_15">
@@ -39,7 +41,7 @@
 									</li>
 								</ul>
 							</form>
-							
+							<label style="color:red;"><?php echo $this->session->flashdata('error_login_client'); ?></label>
 						</div>
 					</div>
 					

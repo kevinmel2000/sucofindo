@@ -75,10 +75,23 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
+
+	//-----------------------------------------------
+	// heroku | comment if using localhost
+	//-----------------------------------------------
 	'hostname' => 'sql12.freemysqlhosting.net',
 	'username' => 'sql12197381',
 	'password' => 'baPwd2N3s1',
 	'database' => 'sql12197381',
+
+	//-----------------------------------------------
+	// localhost | comment if using heroku
+	//-----------------------------------------------
+	// 'hostname' => 'localhost',
+	// 'username' => 'root',
+	// 'password' => '',
+	// 'database' => 'db_sucofindo',
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

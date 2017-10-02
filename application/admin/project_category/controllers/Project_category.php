@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 require_once APPPATH."/concept/ICrud_controller.php";
 
-class Projcat extends CI_Controller implements ICrud_controller {
+class Project_category extends CI_Controller implements ICrud_controller {
 
 	public function __construct() {
 		parent::__construct();
