@@ -18,10 +18,5 @@
 	},
 	"require-dev": {
 		"mikey179/vfsStream": "1.1.*"
-	},
-	"scripts": {
-	    "compile": [
-	      "chmod -R 777 application"
-	    ]
-  }
+	}
 }
