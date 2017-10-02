@@ -7,7 +7,7 @@ class V1 extends CI_Controller {
 		parent::__construct();
 		$this->load->model(array("v1_dao"));
 	}
-
+/*tester saja*/
 	public function index() {
 		$this->load->view("public/header");
 		$this->load->view("v1");
@@ -19,6 +19,9 @@ class V1 extends CI_Controller {
 		switch($p) {
 			case "contoh-view" :
 				$this->load->view("contoh-view");
+			break;
+			case "contoh-viewblink" :
+				$this->load->view("contoh-tesdata");
 			break;
 			case "about-us" :
 				$this->load->view("about-us");
