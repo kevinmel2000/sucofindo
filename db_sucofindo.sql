@@ -17,8 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_pertamina`
+-- Database: sql12197381
 --
+
+USE sql12197381;
 
 -- --------------------------------------------------------
 
