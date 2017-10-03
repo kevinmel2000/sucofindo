@@ -123,7 +123,7 @@
 					<li class="dropdown navbar-user">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
 							<img src="<?php echo base_url(); ?>uploads/profile/<?php echo isset($osess->photo) ? $osess->photo : ''; ?>" alt="<?php echo isset($osess->firstname) ? $osess->firstname : ''; ?> <?php echo isset($osess->lastname) ? $osess->lastname : ''; ?>" /> 
-							<span class="hidden-xs"><?php echo isset($osess->firstname) ? $osess->firstname : ''; ?> <?php echo isses($osess->lastname) ? $osess->lastname : ''; ?></span> <b class="caret"></b>
+							<span class="hidden-xs"><?php echo isset($osess->firstname) ? $osess->firstname : ''; ?> <?php echo isset($osess->lastname) ? $osess->lastname : ''; ?></span> <b class="caret"></b>
 						</a>
 						<ul class="dropdown-menu animated fadeInLeft">
 							<li class="arrow"></li>
