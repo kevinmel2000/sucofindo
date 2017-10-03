@@ -6,7 +6,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title><?php echo $title; ?></title>
+	<title><?php echo isset($title) ? $title : ''; ?></title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -79,7 +79,7 @@
                             </li>
                             <li class="media">
                                 <a href="javascript:;">
-                                    <div class="media-left"><img src="<?php echo base_url(); ?>assets/admin/color-admin/assets/img/user-1.jpg" class="media-object" alt="" /></div>
+                                    <div class="media-left"><img src="assets/admin/color-admin/assets/img/user-1.jpg" class="media-object" alt="" /></div>
                                     <div class="media-body">
                                         <h6 class="media-heading">John Smith</h6>
                                         <p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
@@ -89,7 +89,7 @@
                             </li>
                             <li class="media">
                                 <a href="javascript:;">
-                                    <div class="media-left"><img src="<?php echo base_url(); ?>assets/admin/color-admin/assets/img/user-2.jpg" class="media-object" alt="" /></div>
+                                    <div class="media-left"><img src="assets/admin/color-admin/assets/img/user-2.jpg" class="media-object" alt="" /></div>
                                     <div class="media-body">
                                         <h6 class="media-heading">Olivia</h6>
                                         <p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
@@ -122,8 +122,8 @@
 					</li>
 					<li class="dropdown navbar-user">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-							<img src="<?php echo base_url(); ?>uploads/profile/<?php echo $osess->photo; ?>" alt="<?php echo $osess->firstname; ?> <?php echo $osess->lastname; ?>" /> 
-							<span class="hidden-xs"><?php echo $osess->firstname; ?> <?php echo $osess->lastname; ?></span> <b class="caret"></b>
+							<img src="<?php echo base_url(); ?>uploads/profile/<?php echo isset($osess->photo) ? $osess->photo : ''; ?>" alt="<?php echo isset($osess->firstname) ? $osess->firstname : ''; ?> <?php echo isset($osess->lastname) ? $osess->lastname : ''; ?>" /> 
+							<span class="hidden-xs"><?php echo isset($osess->firstname) ? $osess->firstname : ''; ?> <?php echo isses($osess->lastname) ? $osess->lastname : ''; ?></span> <b class="caret"></b>
 						</a>
 						<ul class="dropdown-menu animated fadeInLeft">
 							<li class="arrow"></li>
