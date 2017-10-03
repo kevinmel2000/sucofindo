@@ -150,10 +150,10 @@
 				<ul class="nav">
 					<li class="nav-profile">
 						<div class="image">
-							<a href="javascript:;"><img src="<?php echo base_url(); ?>uploads/profile/<?php echo $osess->photo; ?>" alt="" /></a>
+							<a href="javascript:;"><img src="<?php echo base_url(); ?>uploads/profile/<?php echo isset($osess->photo) ? $osess->photo : ''; ?>" alt="" /></a>
 						</div>
 						<div class="info">
-							<?php echo $osess->username; ?>
+							<?php echo isset($osess->username) ? $osess->username : ''; ?>
 							<small>Administrator</small>
 						</div>
 					</li>
