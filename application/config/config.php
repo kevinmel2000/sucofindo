@@ -24,10 +24,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-// using heroku
+// using heroku cloud
 $config['base_url'] = 'https://sucofindo.herokuapp.com/';
 
-// using localhost
+// using localhost xenialos
 // $config['base_url'] = 'http://localhost/sucofindo/';
 
 $config['admin_folder'] = 'admin';

@@ -5,21 +5,29 @@
 					<ul>
 						<li data-transition="fade" data-slotamount="10">
 						   <img src="<?php echo base_url(); ?>assets/public/sucofindo/images/img_slide1.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-						   <div class="caption sfl str" data-x="left" data-y="108" data-speed="700"><h1 class="color_dark fw_light">Laboratorium <br>Terbaik</h1></div>
-						   <div class="caption sfl str" data-x="left" data-y="243" data-speed="700" data-start="1200">Kami memiliki laboratorium terlengkap dan modern <br> untuk memastikan mutu yang Anda inginkan. <br> Laboratorium Pengujian, Teknik dan Kalibrasi kami <br>telah terkenal di seluruh Indonesia. <br>Laboratorium Minyak kami adalah <br>salah satu yang terbaik di dunia. <br> Laboratorium Mineral Processing kami <br>kini siap memberikan kajian terpercaya. </div>
+						   <div class="caption sfl str" data-x="left" data-y="108" data-speed="700"><h1 class="color_dark fw_light">SBU Hulu Migas <br>Produk Migas</h1></div>
+						   <div class="caption sfl str" data-x="left" data-y="243" data-speed="700" data-start="1200">
+PT. Sucofindo (Persero)  |  SUCOFINDO melakukan verifikasi, <br />review, pemeriksaan dan evaluasi terhadap fasilitas produksi <br />migas hulu,seperti pada fasilitas ekstrasi, mulai tahap disain,<br /> pabrikasi, instalasi, operasional sampai dengan pemeliharaannya <br />untuk memastikan peralatan dan fasilitas bekerja sesuai dengan <br />spesifikasi dan aman untuk dioperasikan
+						   </div>
 						</li>
 						<li data-transition="fade" data-slotamount="10">
 						   <img src="<?php echo base_url(); ?>assets/public/sucofindo/images/img_slide2.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-						   <div class="caption sfl str" data-x="755" data-y="108" data-speed="700"><h1 class="color_dark fw_light">Standar Dunia</h1></div>
-						   <div class="caption sfl str" data-x="755" data-y="180" data-speed="700" data-start="1200">Kami membantu meningkatkan<br>performa sistem kerja Anda dalam hal manajemen mutu,<br> lingkungan, keamanan, keselamatan dan kesehatan,<br> dan manajemen produksi mencapai standar internasional. <br>Kami juga menyediakan sertifikasi produk <br>berdasar standar nasional dan internasional.</div>
+						   <div class="caption sfl str" data-x="755" data-y="108" data-speed="700"><h1 class="color_dark fw_light">Standar Inspeksi</h1></div>
+						   <div class="caption sfl str" data-x="755" data-y="180" data-speed="700" data-start="1200">Inspeksi dapat dilakukan dengan berbagai cara sesuai dengan <br />kebutuhan dan diutamakan dengan pengujian tanpa rusak sehingga <br />tidak membawa dampak bagi kegiatan operasional perusahaan</div>
 						 
 						</li>
 						<li data-transition="fade" data-slotamount="10">
 						   <img src="<?php echo base_url(); ?>assets/public/sucofindo/images/img_slide3.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-						   <div class="caption sfl str" data-x="755" data-y="75" data-speed="700"><h1 class="color_dark fw_light">Misi Kami</h1></div>
-						   <div class="caption sfl str" data-x="755" data-y="145" data-speed="700" data-start="1200">Menciptakan nilai ekonomi kepada<br>para pemangku kepentingan terutama pelanggan,<br> pemegang saham dan karyawan melalui<br>layanan inspeksi, pengujian, sertifikasi, konsultasi<br>serta jasa terkait lainnyauntuk<br>menjamin kepastian berusaha</div>
+						   <div class="caption sfl str" data-x="755" data-y="75" data-speed="700"><h1 class="color_dark fw_light">Akurasi</h1></div>
+						   <div class="caption sfl str" data-x="755" data-y="145" data-speed="700" data-start="1200">
+							* Kalibrasi Alat Ukur dan Alat Uji <br />
+							* Uji Tanpa Rusak<br />
+							* Inspeksi dan Audit atas Menara Pengeboran (Rig)<br />
+							* Inspeksi OCTG<br />
+						   </div>
 						 
 						</li>
+
 					</ul>
 				</div>
 			</section>
@@ -125,6 +133,21 @@
 						</div>
 					</div>
 					
+				</div>
+			</section>
+
+
+			<section class="section_offset">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+	                        <p style="text-align:center;"><img class="img-thumbnail" src="<?php echo base_url(); ?>assets/public/sucofindo/old-images/main-slide.jpg" style="width:860px;"></p>
+	                        <p style="text-align:center;">
+	                            <img class="img-thumbnail"  src="<?php echo base_url(); ?>assets/public/sucofindo/old-images/home-img-02.png" style="width:300px;height:230px;">
+	                            <img class="img-thumbnail"  src="<?php echo base_url(); ?>assets/public/sucofindo/old-images/home-img-01.png" style="width:556px;height:230px;">
+	                        </p>
+						</div>
+					</div>
 				</div>
 			</section>
 			<hr class="divider_type_2">
