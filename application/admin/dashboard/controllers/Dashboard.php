@@ -42,6 +42,7 @@ class Dashboard extends CI_Controller {
 	}
 
 	public function index(){ 
+		print_r($this->session->userdata("osess"));
 		$this->template->view(
 			/* template view*/
 			array("admin/header","dashboard","admin/footer"), 
