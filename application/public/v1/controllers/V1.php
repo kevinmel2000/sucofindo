@@ -23,6 +23,21 @@ class V1 extends CI_Controller {
 			case "contact-us" :
 				$this->load->view("contact-us");
 			break;
+			case "inspeksi-rig" :
+				$this->load->view("inspeksi-rig");
+			break;
+			case "kalibrasi" :
+				$this->load->view("kalibrasi");
+			break;
+			case "konsultasi" : 
+				$this->load->view("konsultasi");
+			break;
+			case "octg" :
+				$this->load->view("octg");
+			break;
+			case "survey-cargo" :
+				$this->load->view("survey-cargo");
+			break;
 			case "client-room" :
 				$data['csrf'] = array(
 					'name' => $this->security->get_csrf_token_name(),
