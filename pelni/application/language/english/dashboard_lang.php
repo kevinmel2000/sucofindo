@@ -1,5 +1,0 @@
-<?php 
-
-$lang['title'] = "Wellcome :)";
-
-?>

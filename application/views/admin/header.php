@@ -168,49 +168,6 @@
 						    <span>Dashboard</span>
 					    </a>
 					</li>
-					<li id="project-data" class="has-sub">
-						<a href="javascript:;">
-						    <b class="caret pull-right"></b>
-						    <i class="fa fa-database"></i>
-						    <span>Project</span> 
-						</a>
-						<ul class="sub-menu">
-							<li><a href="<?php echo base_url(); ?>index.php/vessel/">Create Project</a></li>
-							<li><a href="<?php echo base_url(); ?>index.php/vessel/">Project List</a></li>
-
-						</ul>
-					</li>
-
-					<li id="general-form" class="has-sub">
-						<a href="<?php echo base_url(); ?>index.php/input/">
-							<i class="fa fa-inbox"></i> 
-							<span>General Form</span>
-						</a>
-					</li>
-					<li id="master-data" class="has-sub">
-						<a href="javascript:;">
-						    <b class="caret pull-right"></b>
-						    <i class="fa fa-database"></i>
-						    <span>Master Data</span> 
-						</a>
-						<ul class="sub-menu">
-							<li><a href="<?php echo base_url(); ?>index.php/vessel/">Vessel</a></li>
-							<li><a href="<?php echo base_url(); ?>index.php/bunker/">Barge</a></li>
-							<li><a href="<?php echo base_url(); ?>index.php/port/">Port</a></li>
-							<li><a href="<?php echo base_url(); ?>index.php/projcat/">Project Category</a></li>
-							<li><a href="<?php echo base_url(); ?>index.php/project/">Project</a></li>
-						</ul>
-					</li>
-					<li id="report-form" class="has-sub">
-						<a href="javascript:;">
-						    <b class="caret pull-right"></b>
-						    <i class="fa fa-newspaper-o"></i>
-						    <span>Report</span> 
-						</a>
-						<ul class="sub-menu">
-							<li><a href="<?php echo base_url(); ?>index.php/report/">General Form</a></li>
-						</ul>
-					</li>
 					<li id="setting-form" class="has-sub">
 						<a href="javascript:;">
 						    <b class="caret pull-right"></b>
@@ -218,7 +175,50 @@
 						    <span>Setting</span> 
 						</a>
 						<ul class="sub-menu">
-							<li><a href="<?php echo base_url(); ?>index.php/user/">User</a></li>
+							<li class="has-sub">
+								<a href="javascript:;">
+							    <b class="caret pull-right"></b>
+							    <span>Security</span> 
+								</a>
+								<ul class="sub-menu">
+									<li><a href="<?php echo base_url(); ?>index.php/user">User Management</a></li>
+									<li><a href="<?php echo base_url(); ?>index.php/function_access/">Function Access</a></li>
+									<li><a href="<?php echo base_url(); ?>index.php/inquiry_access/">Inquiry Access</a></li>
+									<li><a href="<?php echo base_url(); ?>index.php/projcat/">Menu Management</a></li>
+								</ul>
+							</li>
+							<li class="has-sub">
+								<a href="javascript:;">
+							    <b class="caret pull-right"></b>
+							    <span>Website</span> 
+								</a>
+								<ul class="sub-menu">
+									<li><a href="<?php echo base_url(); ?>index.php/page_static/">Page Static</a></li>
+									<li><a href="<?php echo base_url(); ?>index.php/slider/">Slider</a></li>
+								</ul>
+							</li>
+							<li class="has-sub">
+								<a href="javascript:;">
+							    <b class="caret pull-right"></b>
+							    <span>Client</span> 
+								</a>
+								<ul class="sub-menu">
+									<li><a href="<?php echo base_url(); ?>index.php/project/">Project</a></li>
+								</ul>
+							</li>
+							<li class="has-sub">
+								<a href="javascript:;">
+							    <b class="caret pull-right"></b>
+							    <span>Master Data</span> 
+								</a>
+								<ul class="sub-menu">
+									<li><a href="<?php echo base_url(); ?>index.php/vessel/">Vessel</a></li>
+									<li><a href="<?php echo base_url(); ?>index.php/bunker/">Barge</a></li>
+									<li><a href="<?php echo base_url(); ?>index.php/port/">Port</a></li>
+									<li><a href="<?php echo base_url(); ?>index.php/projcat/">Project Category</a></li>
+									<li><a href="<?php echo base_url(); ?>index.php/project/">Project</a></li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 					<li id="logout" class="has-sub">
@@ -227,6 +227,7 @@
 							<span>Logout</span>
 						</a>
 					</li>
+					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify" target="_top"><i class="fa fa-angle-double-left"></i></a></li>
 			        <!-- end sidebar minify button -->
 				</ul>
 				<!-- end sidebar nav -->

@@ -7,7 +7,7 @@
 							<h4 class="color_dark fw_light m_bottom_15 heading_1">Client Room</h4>
 							<hr class="m_bottom_10">
 
-							<form method="post" action="<?php echo base_url(); ?>index.php/v1/client_auth" id="form_1" class="fw_light">
+							<form method="post" action="<?php echo base_url(); ?>index.php/client/auth" id="form_1" class="fw_light">
 								<ul>
 									<li class="m_bottom_10 m_xs_bottom_15">
 										<label class="d_inline_m d_sm_block w_sm_auto m_sm_bottom_5">Client</label>
