@@ -1,0 +1,228 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-face:arial;
+	font-size:12px;
+}
+.container {
+    position: relative;
+    width: 940px !important;
+}
+
+.post {
+margin:10px 20px;
+}
+.post ol {
+margin-left: 30px;
+}
+#address {
+position:absolute;
+left:55px;
+top:53px;
+background:rgba(30,77,142,0.6);
+color:white;
+/*background:rgba(96,199,41,0.5);*/
+padding:10px 25px;
+border:0px #888 solid;
+z-index:200;
+}
+#address a {
+color:#eef;
+text-decoration:none;
+}
+#address a:hover {
+color:#fff;
+text-decoration:underline;
+}
+
+header {
+	color:#fff;
+    background: #fff repeat scroll 0 0;
+    border-top: 0px solid;
+	position: fixed;
+	z-index:9999;
+	opacity:0.9;
+	width:100%;
+}
+#left-header {
+	position:relative;
+	width:650px;
+	height:100px;
+}
+.title-container {
+	position:absolute;
+	top:20px;
+	left:320px;
+}
+.title-container-left{
+	color:#494748;
+	position:absolute;
+	top:55px;
+	left:100px;
+}
+.title-container-right {
+	color:#1E4D8E;
+	position:absolute;
+	top:28px;
+	right:0px;
+}
+.main-title {
+	font-family: 'BebasNeueBold';
+	font-size:26px;
+	font-weight:bold;
+	line-height:0.825;
+	background: -webkit-linear-gradient(#fff, #0A7AC2);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.small-title {
+	font-family: 'BebasNeueBold';
+	font-size:16px;
+	padding-left:2px;
+	background: -webkit-linear-gradient(#000, #000);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#user-menu {
+    background: #222 none repeat scroll 0 0;
+    border-radius: 0 0 3px 3px;
+    padding: 0 5px 5px;
+    position: absolute;
+	margin-right:20px;
+    right: 0;
+	line-height:25px;
+	vertical-align:middle;
+}
+#user-menu form {
+    float: right;
+}
+nav {
+	background: #1E4D8E none repeat scroll 0 0;
+	color:#fff;
+    font-family: "BebasNeueBold";
+    font-size: 20px;
+	width:100%;
+    height: 50px;
+    position: absolute;
+    z-index: 9999;
+}
+nav ul {
+	list-style: outside none none;
+}
+nav ul li {
+	float: left;
+    position: relative;
+}
+nav ul li a {
+    color: #fff !important;
+    display: block;
+    line-height: 50px;
+    outline: medium none !important;
+    padding: 0px 10px 0px 5px;
+    text-decoration: none !important;
+}
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;
+    color: #1E4D8E;
+    text-decoration: none;
+}
+nav ul li.active > a {
+    background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;
+    color: #fff;
+}
+nav ul li a img {
+	display: inline-block;
+    margin: -3px 5px 0 0;
+    vertical-align: middle;
+}
+#notice {
+	border-top: 5px solid #111;
+}
+.notice-info {
+	background: #fff none repeat scroll 0 0;
+    border-radius: 0 0 5px 5px;
+    height: 30px;
+    position: relative;
+}
+.notice-title {
+    background: #c0392b none repeat scroll 0 0;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-family: "BebasNeueBold";
+    font-size: 16px;
+    left: 5px;
+    line-height: 25px;
+    padding: 0 10px;
+    position: absolute;
+    top: 0;
+}
+.notice-group {
+    margin-left: 100px;
+}
+.notice-group .notice-list {
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	position:absolute;
+}
+.notice-list a {
+    color: #fff;
+}
+.wrapper {
+    margin: 160px auto 10px auto;
+}
+.post {
+    font-size: 14px;
+    position: relative;
+}
+.post ul, .post ol {
+    margin-left: 30px;
+}
+.heading h1 {
+    font-family: "BebasNeueBold";
+    font-size: 30px;
+}
+h1, h2, h3, h4 {
+    position: relative;
+    z-index: 1;
+}
+footer {
+    background: #2c3e50 none repeat scroll 0 0;
+    color: #fff;
+    padding-top: 30px;
+}
+footer .copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+}
+.module {
+    padding: 15px;
+    position: relative;
+}
+.bebas {
+    font-family: "BebasNeueBold";
+}
+footer .module h3 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.list-gallery {
+    list-style: outside none none;
+}
+.list-gallery li {
+    float: left;
+    height: 50px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+    width: 50px;
+}
+footer a {
+    color: #fff;
+}
+.list-gallery li img {
+    height: 56px;
+    min-width: 100%;
+}
