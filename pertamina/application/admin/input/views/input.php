@@ -483,6 +483,23 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Documents On Board:</label>
+												<div class='input-group date' id='timelog20'>
+													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
+													<span class="input-group-addon">
+														<span class="glyphicon glyphicon-calendar"></span>
+													</span>
+												</div>												
+											  </div>
+											   <script type="text/javascript">
+														$(function() {
+												$('#timelog20').datetimepicker({
+													format: 'DD-MM-YYYY'
+												  pickTime: false
+												});
+											  });
+													</script>
+											<div class="form-group">
+												<label class="control-label col-md-4">Vessel Schedule to Unberth:</label>
 												<div class='input-group date' id='timelog21'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
@@ -499,7 +516,7 @@
 											  });
 													</script>
 											<div class="form-group">
-												<label class="control-label col-md-4">Vessel Schedule to Unberth:</label>
+												<label class="control-label col-md-4">ETA Next Port   :</label>
 												<div class='input-group date' id='timelog22'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
@@ -510,23 +527,6 @@
 											   <script type="text/javascript">
 														$(function() {
 												$('#timelog22').datetimepicker({
-													format: 'DD-MM-YYYY'
-												  pickTime: false
-												});
-											  });
-													</script>
-											<div class="form-group">
-												<label class="control-label col-md-4">ETA Next Port   :</label>
-												<div class='input-group date' id='timelog23'>
-													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
-													<span class="input-group-addon">
-														<span class="glyphicon glyphicon-calendar"></span>
-													</span>
-												</div>												
-											  </div>
-											   <script type="text/javascript">
-														$(function() {
-												$('#timelog23').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -796,7 +796,7 @@
                                                 <!-- begin col-4 -->
                                                <div class="form-group">
 												<label class="control-label col-md-4">Vessel Arrive Terminal:</label>
-												<div class='input-group date' id='vesarivedatetimepicker3'>
+												<div class='input-group date' id='disdistimelog'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -805,7 +805,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesarivedatetimepicker3').datetimepicker({
+												$('#distimelog').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -813,7 +813,7 @@
 													</script>
 											   <div class="form-group">
 												<label class="control-label col-md-4">Vessel Anchoraged:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog2'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -822,7 +822,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog2').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -830,7 +830,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Notice of Readiness Tendered:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog3'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -839,7 +839,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog3').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -847,7 +847,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Notice of Readiness Accepted:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog4'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -856,7 +856,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog4').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -864,7 +864,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Pilot on Board for Berthing:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog5'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -873,7 +873,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog5').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -881,7 +881,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Anchors Aweigh:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog6'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -890,7 +890,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog6').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -898,7 +898,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">First Line:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog7'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -907,7 +907,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog7').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -915,7 +915,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Vessel Berthed:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog8'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -924,7 +924,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog8').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -932,7 +932,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Surveyor on Board:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog9'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -941,7 +941,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog9').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -949,7 +949,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Key Meeting:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog10'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -958,7 +958,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog10').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -966,7 +966,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Deballasting (Comm. – Compl.):</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog11'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -975,7 +975,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog11').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -983,7 +983,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Sea Valve Sealed:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog12'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -992,7 +992,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog12').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -1000,7 +1000,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Tanks Inspection (Comm. – Compl.):</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog13'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -1009,7 +1009,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog13').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -1017,7 +1017,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Hose/Loading Arm Connected:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog14'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -1026,7 +1026,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog14').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -1034,7 +1034,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Loading Commenced:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog15'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -1043,7 +1043,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog15').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -1051,7 +1051,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Loading Completed:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog16'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -1060,7 +1060,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog16').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -1068,7 +1068,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Hose/Loading Arm Disconnected:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog17'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -1077,7 +1077,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog17').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -1085,7 +1085,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Sampling After Loading (Comm. – Compl.):</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog18'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -1094,7 +1094,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog18').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -1102,7 +1102,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Ullages and Water Dips (Comm. – Compl.):</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog19'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -1111,7 +1111,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog20').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -1119,7 +1119,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Documents On Board:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog20'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -1128,7 +1128,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog20').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -1136,7 +1136,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">Vessel Schedule to Unberth:</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog21'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -1145,7 +1145,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog21').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -1153,7 +1153,7 @@
 													</script>
 											<div class="form-group">
 												<label class="control-label col-md-4">ETA Next Port   :</label>
-												<div class='input-group date' id='vesanchordatetimepicker3'>
+												<div class='input-group date' id='distimelog22'>
 													<input type='text' data-format="dd-MM-yyyy" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
@@ -1162,7 +1162,7 @@
 											  </div>
 											   <script type="text/javascript">
 														$(function() {
-												$('#vesanchordatetimepicker3').datetimepicker({
+												$('#distimelog22').datetimepicker({
 													format: 'DD-MM-YYYY'
 												  pickTime: false
 												});
@@ -1220,19 +1220,19 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">Bill of Lading:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_billandingkl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_billandingkl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_billandingbb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_billandingmeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_billandinglongton" placeholder="...">
 												</div>
 											  </div>											  
                                             </div>
@@ -1244,19 +1244,19 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">Ship Figure (AL):</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_ship_figkl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_ship_figkl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_ship_figbb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_ship_figmeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_ship_figlongton" placeholder="...">
 												</div>
 											  </div>											  
                                             </div>
@@ -1268,19 +1268,19 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">Differences:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_differkl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_differkl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_differbb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_differmeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_differlongton" placeholder="...">
 												</div>
 											  </div>											  
                                             </div>
@@ -1292,19 +1292,19 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">% tase:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_tassekl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_tassekl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_tassebb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_tassemeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_tasselongton" placeholder="...">
 												</div>
 											  </div>											  
                                             </div>
@@ -1325,19 +1325,19 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">Ship Figure (AL):</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_ship_figalkl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_ship_figalkl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_ship_figalbb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_ship_figalmeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_ship_figallongton" placeholder="...">
 												</div>
 											  </div>											  
                                             </div>
@@ -1349,19 +1349,19 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">Ship Figure (BD):</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_ship_figbdkl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_ship_figbdkl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_ship_figbdbb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_ship_figbdmeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_ship_figbdlongton" placeholder="...">
 												</div>
 											  </div>											  
                                             </div>
@@ -1373,21 +1373,21 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">Shore Received:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_shore_reckl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_shore_reckl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_shore_recbb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_shore_recmeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_shore_reclongton" placeholder="...">
 												</div>
-											  </div>											  
+											  </div>
                                             </div>
                                             <!-- end row -->
 											
@@ -1397,21 +1397,21 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">% tase:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_tasekl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_tasekl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_tasebb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_tasemeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_trans_taselongton" placeholder="...">
 												</div>
-											  </div>											  
+											  </div>
                                             </div>
                                             <!-- end row -->
 											
@@ -1430,19 +1430,19 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">Ship Figure (BD):</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_ship_figbdkl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_ship_figbdkl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_ship_figbdbb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_ship_figbdmeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_ship_figbdlongton" placeholder="...">
 												</div>
 											  </div>											  
                                             </div>
@@ -1454,21 +1454,21 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">Shore Received:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_sh_rec_figkl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_sh_rec_figkl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_sh_rec_figbb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_sh_rec_figmeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_sh_rec_figlongton" placeholder="...">
 												</div>
-											  </div>											  
+											  </div>
                                             </div>
                                             <!-- end row -->
 											
@@ -1478,21 +1478,21 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">Differences:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_diffkl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_diffkl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_diffbb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_diffmeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_difflongton" placeholder="...">
 												</div>
-											  </div>											  
+											  </div>
                                             </div>
                                             <!-- end row -->
 											
@@ -1502,19 +1502,19 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">% tase:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_tasekl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_tasekl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_tasebb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_tasemeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_taselongton" placeholder="...">
 												</div>
 											  </div>											  
                                             </div>
@@ -1535,19 +1535,19 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">Bill of Lading:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outbilandkl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outbilandkl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outbilandbb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outbilandmeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outbilandlongton" placeholder="...">
 												</div>
 											  </div>											  
                                             </div>
@@ -1559,21 +1559,21 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">Shore Received:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outsreckl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outsreckl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outsrecbb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outsrecmeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outsreclongton" placeholder="...">
 												</div>
-											  </div>											  
+											  </div>
                                             </div>
                                             <!-- end row -->
 											
@@ -1583,19 +1583,19 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">Differences:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outdiffkl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outdiffkl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outdiffbb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outdiffmeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outdifflongton" placeholder="...">
 												</div>
 											  </div>											  
                                             </div>
@@ -1607,19 +1607,19 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">% tase:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outtasekl" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outtasekl15" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outtasebb60" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outtasemeton" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="dis_outtaselongton" placeholder="...">
 												</div>
 											  </div>											  
                                             </div>
@@ -1636,19 +1636,19 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">ROB:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="rob1" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="rob2" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="rob3" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="rob4" placeholder="...">
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="Vessel">
+												  <input type="text" class="form-control" id="rob5" placeholder="...">
 												</div>
 											  </div>											  
                                             </div>
@@ -1660,25 +1660,25 @@
                                                <div class="form-group">
 												<label class="control-label col-md-4">Stowage Plan:</label>
 												<div class="col-md-8">
-												  <input type="text" class="form-control" id="supplier" placeholder="Supplier">
+												  <input type="text" class="form-control" id="dis_stowage_plan" placeholder="Stowage Plan">
 												</div>
 											  </div>
 											  <div class="form-group">
 												<label class="control-label col-md-4">Density:</label>
 												<div class="col-md-8">
-												  <input type="text" class="form-control" id="landing_port" placeholder="Landing Port">
+												  <input type="text" class="form-control" id="dis_density" placeholder="Density">
 												</div>
 											  </div>
 											  <div class="form-group">
 												<label class="control-label col-md-4">Free Water:</label>
 												<div class="col-md-8">
-												  <input type="text" class="form-control" id="landing_port" placeholder="Landing Port">
+												  <input type="text" class="form-control" id="dis_free_water" placeholder="Free Water">
 												</div>
 											  </div>
 											  <div class="form-group">
 												<label class="control-label col-md-4">VEF:</label>
 												<div class="col-md-8">
-												  <input type="text" class="form-control" id="landing_port" placeholder="Landing Port">
+												  <input type="text" class="form-control" id="dis_vef" placeholder="VEF">
 												</div>
 											  </div>											 
                                             </div>
@@ -1690,7 +1690,7 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">Arrival Draft:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="arival_draft_m" placeholder="Arrival Draft">
+												  <input type="text" class="form-control" id="arival_draft_fwd" placeholder="Arrival Draft">
 												</div>
 												<div class="col-md-2">
 												  M
@@ -1699,7 +1699,7 @@
 												  
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="AFT">
+												  <input type="text" class="form-control" id="arival_draft_aft" placeholder="AFT">
 												</div>
 												<div class="col-md-2">
 												  M
@@ -1714,7 +1714,7 @@
                                                <div class="form-group">
 												<label class="control-label col-md-2">Depature Draft:</label>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="FWD">
+												  <input type="text" class="form-control" id="dis_dep_draft_fwd" placeholder="FWD">
 												</div>
 												<div class="col-md-2">
 												  M
@@ -1723,7 +1723,7 @@
 												  
 												</div>
 												<div class="col-md-2">
-												  <input type="text" class="form-control" id="vessel" placeholder="AFT">
+												  <input type="text" class="form-control" id="dis_dep_draft_aft" placeholder="AFT">
 												</div>
 												<div class="col-md-2">
 												  M
@@ -1738,7 +1738,7 @@
                                                <div class="form-group">
 												<label class="control-label col-md-4">Slops:</label>
 												<div class="col-md-8">
-												  <input type="text" class="form-control" id="slops" placeholder="Slops">
+												  <input type="text" class="form-control" id="dis_slops" placeholder="Slops">
 												</div>
 											  </div>																						 
                                             </div>
