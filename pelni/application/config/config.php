@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:8000/pelni';
+$config['base_url'] = "http://sucofindo.herokuapp.com/pelni/";
 
 $config['admin_folder'] = 'admin';
 
