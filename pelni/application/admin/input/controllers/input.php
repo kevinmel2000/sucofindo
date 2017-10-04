@@ -82,6 +82,29 @@ class Input extends CI_Controller {
 			$this->data);
 	}
 	
+	public function add_form() {
+
+		$this->template->view(
+			/* template view*/
+			array("admin/header","input","admin/footer"), 
+			/* pass data */
+			array(
+				"title" => "input data",
+				"osess" => $this->session->userdata("osess"),
+				"breadcrumb" => $this->template->breadcrumb(
+					"<ol class=\"breadcrumb pull-right\">", 
+					"</ol>",
+					array(
+						array("link" => "javascript:;","text" => "Home"),
+						array("link" => "javascript:;","text" => "Master Data"),
+						array("link" => "javascript:;","text" => "Vessel"),
+						array("link" => "javascript:;","text" => "Add")
+					)
+				)),
+			/* pass class data */
+			$this->data);
+	}
+	
 	public function add_data() {
 		
 		$vessel = $this->input->post("vessel");
@@ -100,9 +123,6 @@ class Input extends CI_Controller {
 		$ship_rec_kl = $this->input->post("ship_rec_kl");
 		$ship_rec_kl15 = $this->input->post("ship_rec_kl15");	
 		
-		$this->form_validation->set_rules('vessel', 'Vesel name', 'trim|required');
-		$this->form_validation->set_rules('barge', 'Barge Name', 'trim|required');
-		
 		$dataform = array(
 		    'vessel' => $vessel,
 			'barge' => $barge,
@@ -119,10 +139,13 @@ class Input extends CI_Controller {
 			'ship_rec_kl' => $ship_rec_kl,
 			'ship_rec_kl15' => $ship_rec_kl15
 		);
+		
+		/* $this->form_validation->set_rules('vessel', 'Vesel name', 'trim|required');
+		$this->form_validation->set_rules('barge', 'Barge Name', 'trim|required');		
 
 		if ($this->form_validation->run() == FALSE) {
 			$this->add_form();
-		} else {
+		} else { */
 			$this->Process_data->add($dataform);
 			$this->session->set_flashdata(
 				'front_message', 
@@ -136,6 +159,6 @@ class Input extends CI_Controller {
             	</div>');
 
 			redirect("input");	
-		}	
+		//}	
 	}
 }
