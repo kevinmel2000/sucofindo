@@ -123,7 +123,7 @@
                                                 </a>
                                                 <ul class="sub_menu r_xs_corners bg_light vr_list tr_all tr_xs_none trf_xs_none bs_xs_none d_xs_none">
                                                     <li>
-                                                        <a href="<?php echo base_url(); ?>index.php/v1/contact-us/" class="d_block color_dark relative">Hubungi Kami</a>
+                                                        <a href="<?php echo base_url(); ?>index.php/v1/page/contact-us/" class="d_block color_dark relative">Hubungi Kami</a>
                                                     </li>
                                                 </ul>
                                             </li>
