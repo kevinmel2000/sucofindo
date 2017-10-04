@@ -17,12 +17,6 @@ class V1 extends CI_Controller {
 	public function page($p="default") {
 		$this->load->view("public/header");
 		switch($p) {
-			case "contoh-view" :
-				$this->load->view("contoh-view");
-			break;
-			case "contoh-viewblink" :
-				$this->load->view("contoh-tesdata");
-			break;
 			case "about-us" :
 				$this->load->view("about-us");
 			break;
