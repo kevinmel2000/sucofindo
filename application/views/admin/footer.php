@@ -21,8 +21,8 @@
 	<?php echo $html_js; ?>
 
 	<script type="text/javascript">
-		window.photo = "<?php echo $osess->photo; ?>";
-		window.username = "<?php echo $osess->username; ?>";
+		window.photo = "<?php echo isset($osess->photo) ? $osess->photo : ''; ?>";
+		window.username = "<?php echo isset($osess->username) ? $osess->username : ''; ?>";
 		window.base_url = "<?php echo base_url(); ?>";
 	</script>
 </body>

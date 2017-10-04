@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.5.2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: 28 Sep 2017 pada 20.43
--- Versi Server: 10.1.9-MariaDB
--- PHP Version: 5.5.30
+-- Host: localhost
+-- Generation Time: Oct 02, 2017 at 09:43 
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,15 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: sql12197381
+-- Database: `db_sucofindo`
 --
-
-USE sql12197381;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bbm`
+-- Table structure for table `bbm`
 --
 
 CREATE TABLE `bbm` (
@@ -37,7 +35,7 @@ CREATE TABLE `bbm` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bunker`
+-- Table structure for table `bunker`
 --
 
 CREATE TABLE `bunker` (
@@ -47,7 +45,7 @@ CREATE TABLE `bunker` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `bunker`
+-- Dumping data for table `bunker`
 --
 
 INSERT INTO `bunker` (`id`, `bunker_name`, `bunker_type`) VALUES
@@ -56,7 +54,42 @@ INSERT INTO `bunker` (`id`, `bunker_name`, `bunker_type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `menus`
+-- Table structure for table `clients`
+--
+
+CREATE TABLE `clients` (
+  `id` int(5) NOT NULL,
+  `username` varchar(35) NOT NULL,
+  `firstname` text NOT NULL,
+  `lastname` varchar(35) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone_number` varchar(15) NOT NULL,
+  `photo` text NOT NULL,
+  `password` text NOT NULL,
+  `client` varchar(100) NOT NULL,
+  `base_page` text NOT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT '1',
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_user_id` int(11) NOT NULL,
+  `edited_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `edited_user_id` int(11) NOT NULL,
+  `deleted_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `deleted_user_id` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `clients`
+--
+
+INSERT INTO `clients` (`id`, `username`, `firstname`, `lastname`, `email`, `phone_number`, `photo`, `password`, `client`, `base_page`, `active`, `created_date`, `created_user_id`, `edited_date`, `edited_user_id`, `deleted_date`, `deleted_user_id`) VALUES
+(1, 'admin', 'Andi', 'Firmansyah', 'admin@gmail.com', '089663159652', 'fajar.png', '21232f297a57a5a743894a0e4a801fc3', 'PT. PERTAMINA (Persero)', 'pertamina', 1, '2017-10-02 18:44:16', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0),
+(2, 'wawan', 'Wawan', 'Kurniawan', 'admin@xpose.com', '089777878897', 'fajar.png', '21232f297a57a5a743894a0e4a801fc3', 'Pelayaran Nasional Indonesia (Pelni)', 'pelni', 1, '2017-10-02 18:44:23', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0),
+(3, 'wisnu', 'wisnu', 'agung', 'admin@mediasi.com', '089777878897', 'fajar.png', '21232f297a57a5a743894a0e4a801fc3', 'PT. PLN (Persero)', 'pln', 1, '2017-10-02 18:44:29', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menus`
 --
 
 CREATE TABLE `menus` (
@@ -72,7 +105,7 @@ CREATE TABLE `menus` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `menus`
+-- Dumping data for table `menus`
 --
 
 INSERT INTO `menus` (`id`, `menu_name`, `menu_link`, `sort_number`, `parent_id`, `created_date`, `created_user_id`, `modified_date`, `modified_user_id`) VALUES
@@ -90,7 +123,7 @@ INSERT INTO `menus` (`id`, `menu_name`, `menu_link`, `sort_number`, `parent_id`,
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `port`
+-- Table structure for table `port`
 --
 
 CREATE TABLE `port` (
@@ -100,7 +133,7 @@ CREATE TABLE `port` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `port`
+-- Dumping data for table `port`
 --
 
 INSERT INTO `port` (`id`, `port_name`, `port_type`) VALUES
@@ -109,7 +142,7 @@ INSERT INTO `port` (`id`, `port_name`, `port_type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `projcat`
+-- Table structure for table `projcat`
 --
 
 CREATE TABLE `projcat` (
@@ -118,7 +151,7 @@ CREATE TABLE `projcat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `projcat`
+-- Dumping data for table `projcat`
 --
 
 INSERT INTO `projcat` (`projcat_id`, `projcat_name`) VALUES
@@ -131,7 +164,7 @@ INSERT INTO `projcat` (`projcat_id`, `projcat_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `project`
+-- Table structure for table `project`
 --
 
 CREATE TABLE `project` (
@@ -143,7 +176,7 @@ CREATE TABLE `project` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `project`
+-- Dumping data for table `project`
 --
 
 INSERT INTO `project` (`project_id`, `project_name`, `project_description`, `project_uri`, `projcat_id`) VALUES
@@ -153,7 +186,7 @@ INSERT INTO `project` (`project_id`, `project_name`, `project_description`, `pro
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `routes`
+-- Table structure for table `routes`
 --
 
 CREATE TABLE `routes` (
@@ -167,7 +200,7 @@ CREATE TABLE `routes` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `routes`
+-- Dumping data for table `routes`
 --
 
 INSERT INTO `routes` (`id`, `slug`, `controller`, `created_date`, `created_user_id`, `modified_date`, `modified_user_id`) VALUES
@@ -178,7 +211,7 @@ INSERT INTO `routes` (`id`, `slug`, `controller`, `created_date`, `created_user_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `setting`
+-- Table structure for table `setting`
 --
 
 CREATE TABLE `setting` (
@@ -188,25 +221,24 @@ CREATE TABLE `setting` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `setting`
+-- Dumping data for table `setting`
 --
 
 INSERT INTO `setting` (`id`, `setting_name`, `setting_value`) VALUES
-(1, 'app_name', 'Pertamina'),
-(2, 'cover_image', 'http://mediatataruang.com/wp-content/uploads/2017/08/pertamina1.jpg'),
-(3, 'logo', 'http://4.bp.blogspot.com/-RB2tW6veroM/VD3e8eOc0FI/AAAAAAAASd8/R0EYqG3O864/s1600/LOGO%2BBARU%2BPERTAMINA.png'),
+(1, 'app_name', 'Sucofindo'),
+(2, 'cover_image', 'http://static.panoramio.com/photos/original/61071142.jpg'),
 (4, 'login_title', 'Pertamina Monitoring System'),
 (5, 'brand_height', '65px'),
-(6, 'brand_width', '290px'),
-(7, 'brand_logo', 'http://4.bp.blogspot.com/-RB2tW6veroM/VD3e8eOc0FI/AAAAAAAASd8/R0EYqG3O864/s1600/LOGO%2BBARU%2BPERTAMINA.png'),
+(6, 'brand_width', '170px'),
+(7, 'brand_logo', 'http://cv-bga.co.id/wp-content/uploads/2015/10/LOGO-Sucofindo.png'),
 (8, 'logo_weight', '190px'),
 (9, 'logo_height', '40px'),
-(10, 'logo_image', 'http://4.bp.blogspot.com/-RB2tW6veroM/VD3e8eOc0FI/AAAAAAAASd8/R0EYqG3O864/s1600/LOGO%2BBARU%2BPERTAMINA.png');
+(10, 'logo_image', 'http://cv-bga.co.id/wp-content/uploads/2015/10/LOGO-Sucofindo.png');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -221,22 +253,24 @@ CREATE TABLE `users` (
   `active` tinyint(1) NOT NULL DEFAULT '1',
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `created_user_id` int(11) NOT NULL,
-  `modified_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modifier_user_id` int(11) NOT NULL
+  `edited_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `edited_user_id` int(11) NOT NULL,
+  `deleted_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `deleted_user_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `email`, `phone_number`, `photo`, `password`, `active`, `created_date`, `created_user_id`, `modified_date`, `modifier_user_id`) VALUES
-(1, 'admin', 'Fajar Rizki Dwi P.', '', 'admin@gmail.com', '089663159652', 'fajar.png', '21232f297a57a5a743894a0e4a801fc3', 1, '2017-09-28 10:01:19', 0, '0000-00-00 00:00:00', 0),
-(2, 'wawan', 'Wawan Kurniawan', '', 'wawan@gmail.com', '089777878897', 'fajar.png', '21232f297a57a5a743894a0e4a801fc3', 1, '2017-05-25 18:04:53', 0, '0000-00-00 00:00:00', 0);
+INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `email`, `phone_number`, `photo`, `password`, `active`, `created_date`, `created_user_id`, `edited_date`, `edited_user_id`, `deleted_date`, `deleted_user_id`) VALUES
+(1, 'admin', 'Fajar Rizki Dwi P.', '', 'admin@gmail.com', '089663159652', 'fajar.png', '21232f297a57a5a743894a0e4a801fc3', 1, '2017-09-28 10:01:19', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0),
+(2, 'wawan', 'Wawan Kurniawan', '', 'wawan@gmail.com', '089777878897', 'fajar.png', '21232f297a57a5a743894a0e4a801fc3', 1, '2017-05-25 18:04:53', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `vessel`
+-- Table structure for table `vessel`
 --
 
 CREATE TABLE `vessel` (
@@ -246,7 +280,7 @@ CREATE TABLE `vessel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `vessel`
+-- Dumping data for table `vessel`
 --
 
 INSERT INTO `vessel` (`id`, `vessel_name`, `vessel_type`) VALUES
@@ -267,6 +301,12 @@ ALTER TABLE `bbm`
 -- Indexes for table `bunker`
 --
 ALTER TABLE `bunker`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `clients`
+--
+ALTER TABLE `clients`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -333,10 +373,15 @@ ALTER TABLE `bbm`
 ALTER TABLE `bunker`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
+-- AUTO_INCREMENT for table `clients`
+--
+ALTER TABLE `clients`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `port`
 --

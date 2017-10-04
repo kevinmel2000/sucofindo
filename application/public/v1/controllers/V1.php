@@ -5,6 +5,7 @@ class V1 extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
+		$this->load->model(array("v1_dao"));
 	}
 /*tester saja*/
 	public function index() {
@@ -16,12 +17,6 @@ class V1 extends CI_Controller {
 	public function page($p="default") {
 		$this->load->view("public/header");
 		switch($p) {
-			case "contoh-view" :
-				$this->load->view("contoh-view");
-			break;
-			case "contoh-viewblink" :
-				$this->load->view("contoh-tesdata");
-			break;
 			case "about-us" :
 				$this->load->view("about-us");
 			break;
@@ -44,8 +39,15 @@ class V1 extends CI_Controller {
 	}
 
 	public function client_auth() {
-		echo $client   = $this->input->post("cln");
-		echo $user     = $this->input->post("usr");
-		echo $password = $this->input->post("pwd");
+		$client   = $this->input->post("cln");
+		$username = $this->input->post("usr");
+		$password = $this->input->post("pwd");
+		$o = $this->v1_dao->client_check($username, $password, $client);
+		if($o->num_rows() > 0) {
+			redirect('/client/index/'.$o->result()[0]->base_page, 'refresh');
+		} else {
+			$this->session->set_flashdata('error_login_client', 'Username or password incorrect !');
+			redirect('/v1/page/client-room/', 'refresh');
+		}
 	}
 }

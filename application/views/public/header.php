@@ -88,79 +88,34 @@
                                                     <li>
                                                         <a href="<?php echo base_url(); ?>index.php/v1/page/about-us/" class="d_block color_dark relative">Tentang SUCOFINDO</a>
                                                     </li>
-                                                    <li>
-                                                        <a href="#" class="d_block color_dark relative">Tanggung Jawab Sosial</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="d_block color_dark relative">Tata Kelola</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="d_block color_dark relative">Titik layanan</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="d_block color_dark relative">Laporan Tahunan</a>
-                                                    </li>
                                                 </ul>
                                             </li>
                                             <li class="container3d relative f_xs_none m_xs_bottom_5">
 
-                                                <a class="color_dark fs_large relative r_xs_corners" href="portfolio_classic_1_column.html">Jasa Kami
+                                                <a class="color_dark fs_large relative r_xs_corners" href="#">Layanan Kami
                                                     <i class="icon-angle-down d_inline_m r_xs_corners"></i>
                                                 </a>
                                                 <!--sub menu-->
 
                                                 <ul class="sub_menu r_xs_corners bg_light vr_list tr_all tr_xs_none trf_xs_none bs_xs_none d_xs_none">
                                                     <li>
-                                                        <a href="#" class="d_block color_dark relative">Inspeksi dan Audit</a>
+                                                        <a href="<?php echo base_url(); ?>index.php/v1/page/survey-cargo" class="d_block color_dark relative">Survey Cargo</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="d_block color_dark relative">Pengujian dan Analisa</a>
+                                                        <a href="<?php echo base_url(); ?>index.php/v1/page/inspeksi-rig" class="d_block color_dark relative">Inspeksi Rig</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="d_block color_dark relative">Layanan Sertifikasi</a>
+                                                        <a href="<?php echo base_url(); ?>index.php/v1/page/octg" class="d_block color_dark relative">OCTG</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="d_block color_dark relative">Layanan Pelatihan</a>
+                                                        <a href="<?php echo base_url(); ?>index.php/v1/page/kalibrasi" class="d_block color_dark relative">Kalibrasi</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="d_block color_dark relative">Layanan Konsultasi</a>
+                                                        <a href="<?php echo base_url(); ?>index.php/v1/page/konsultasi" class="d_block color_dark relative">Konsultasi</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             
-                                            <li class="container3d relative f_xs_none m_xs_bottom_5">
-                                                <a class="color_dark fs_large relative r_xs_corners" href="#">Layanan per Sektor
-                                                    <i class="icon-angle-down d_inline_m"></i>
-                                                </a>
-                                                <!--sub mega menu-->
-                                                <div class="mega_menu_container r_xs_corners bs_xs_none bg_light shadow_1 tr_all tr_xs_none trf_xs_none d_xs_none">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                                            <!--sub menu-->
-                                                            <ul class="sub_menu vr_list tr_all relative">
-                                                                <li><a href="#" class="d_block color_dark">Industri Bahan Tambang dan Galian</a></li>
-                                                                <li><a href="#" class="d_block color_dark">Industri Minyak, Gas dan Petrokimia</a></li>
-                                                                <li><a href="#" class="d_block color_dark">Usaha Pertanian dan Perikanan</a></li>
-                                                                <li><a href="#" class="d_block color_dark">Jasa Perbankan dan Keuangan</a></li>
-                                                                <li><a href="#" class="d_block color_dark">Usaha Konstruksi dan Infrastruktur</a></li>
-                                                                <li><a href="#" class="d_block color_dark">Pemerintah dan Institusi Internasional</a></li>
-                                                                
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-6 col-sm-12 relative">
-                                                            <!--sub menu-->
-                                                            <ul class="sub_menu vr_list tr_all relative">
-                                                                <li><a href="#" class="d_block color_dark">Industri Produk Mineral dan Kimia</a></li>
-                                                                <li><a href="#" class="d_block color_dark">Industri Produk Konsumen</a></li>
-                                                                <li><a href="#" class="d_block color_dark">Jasa Perbankan dan Keuangan</a></li>
-                                                                <li><a href="#" class="d_block color_dark">Usaha Transportasi dan Pariwisata</a></li>
-                                                                <li><a href="#" class="d_block color_dark">Industri Energi dan Prasarana Umum</a></li>
-                                                                <li><a href="#" class="d_block color_dark">Industri Mesin dan Alat Berat</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
 
                                             <li class="container3d relative f_xs_none m_xs_bottom_5">
                                                 <a class="color_dark fs_large relative r_xs_corners" href="shortcodes_elements.html">Layanan Pelanggan
@@ -168,10 +123,7 @@
                                                 </a>
                                                 <ul class="sub_menu r_xs_corners bg_light vr_list tr_all tr_xs_none trf_xs_none bs_xs_none d_xs_none">
                                                     <li>
-                                                        <a href="<?php echo base_url(); ?>index.php/v1/contact-us/" class="d_block color_dark relative">Hubungi Kami</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="d_block color_dark relative">Temui Kami</a>
+                                                        <a href="<?php echo base_url(); ?>index.php/v1/page/contact-us/" class="d_block color_dark relative">Hubungi Kami</a>
                                                     </li>
                                                 </ul>
                                             </li>
