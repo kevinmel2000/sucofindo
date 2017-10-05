@@ -110,7 +110,6 @@ $form_array[] = array('value' => 'data14','class' => '','type' => 'text', 'title
                         <div class="row">
                            <div class="col-md-8">
                               <input type="hidden" name="<?php echo $csrf['name']; ?>" value="<?php echo $csrf['hash'];?>" />
-                              <a class="btn btn-primary btn-sm" href="<?php echo base_url(); ?>index.php/client/page/pelni-form"><i class="fa fa-reply"></i> Back</a>
                               <button type="submit" class="btn btn-success btn-sm">Submit</button>
                            </div>
                         </div>
