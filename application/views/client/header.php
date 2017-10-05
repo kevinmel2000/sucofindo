@@ -126,6 +126,20 @@
 						</a>
 					</li>
 					<li id="logout" class="has-sub">
+					<?php if(client_session('client_site') == 'pertamina') { ?>
+						<a href="<?php echo base_url(); ?>index.php/client/page/pertamina-report">
+					<?php } else if(client_session('client_site') == 'pelni') { ?>
+						<a href="<?php echo base_url(); ?>index.php/client/page/pelni-report">
+					<?php } else if(client_session('client_site') == 'pln') { ?>
+						<a href="<?php echo base_url(); ?>index.php/client/page/pln-report">
+					<?php } else { ?>
+						<a href="<?php echo base_url(); ?>index.php/client">
+					<?php } ?>
+							<i class="fa fa-bar-chart"></i> 
+							<span>Report</span>
+						</a>
+					</li>
+					<li id="logout" class="has-sub">
 						<a href="<?php echo base_url(); ?>index.php/client/logout/">
 							<i class="fa fa-sign-out"></i> 
 							<span>Logout</span>

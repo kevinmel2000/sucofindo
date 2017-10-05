@@ -121,6 +121,9 @@ class Client extends CI_Controller {
 				$this->data['title'] = "Pertamina Form";
 				$this->load->view("pertamina-form", $this->data);
 			break;
+			case "pelni-report" :
+				$this->load->view("pelni-report", $this->data);
+			break;
 			case "pln-form" :
 				$this->data['csrf'] = array(
 					'name' => $this->security->get_csrf_token_name(),
