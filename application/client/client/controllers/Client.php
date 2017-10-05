@@ -172,6 +172,7 @@ class Client extends CI_Controller {
 					'bar_fig_afdc_kl15' => $ship_rec_kl,
 					'ship_rec_kl' => $ship_rec_kl15
 				));
+				redirect('/client/page/pelni-form', 'refresh');
 			break;
 			default : 
 			break;
