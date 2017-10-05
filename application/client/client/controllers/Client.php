@@ -35,7 +35,11 @@ class Client extends CI_Controller {
 			<link href="'.base_url().'assets/admin/color-admin/assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" />
     		<link href="'.base_url().'assets/admin/color-admin/assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />';
 		    
-
+			$this->data['html_css'] .= '.form-horizontal .control-label{
+										  /* text-align:right; */
+										  text-align:left;
+										  background-color:#ffa;
+										}';
 		$this->data['html_js'] = '
 			<script src="'.base_url().'assets/admin/color-admin/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 			<script src="'.base_url().'assets/admin/color-admin/assets/plugins/ionRangeSlider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
@@ -110,6 +114,14 @@ class Client extends CI_Controller {
 					'name' => $this->security->get_csrf_token_name(),
 					'hash' => $this->security->get_csrf_hash()
 				);
+				$this->data['html_js'] .= '<script type="text/javascript">
+												$(function() {
+												    $(".datepicker").datetimepicker({
+												      format: "DD-MM-YYYY",
+													  pickTime: false
+												    });
+												});
+										   </script>';
 				$this->data['title'] = "Pelni Form";
 				$this->load->view("pelni-form", $this->data);
 			break;
@@ -138,6 +150,32 @@ class Client extends CI_Controller {
 			break;
 		}
 		$this->load->view("client/footer",$this->data);
+	}
+
+	public function method($m="default") {
+		switch($m) {
+			case 'pelni_add' : 
+				extract($this->input->post());
+				$this->load->model('InfoDao');
+				$last_id = $this->InfoDao->save(array(
+					'vessel' => $vessel,
+					'barge'  => $barge ,
+					'port'   => $port,
+					'datetimepicker1' => $loading_date ,
+					'deliv_order_kl' => $deliv_order_kl ,
+					'deliv_order_kl15' => $deliv_order_kl15 ,
+					'bar_fig_afterload_kl' => $bar_fig_afterload_kl,
+					'bar_fig_afterload_kl15' => $bar_fig_afterload_kl15,
+					'bar_fig_bfdc_kl' => $bar_fig_bfdc_kl15,
+					'bar_fig_bfdc_kl15' => $bar_fig_afdc_kl,
+					'bar_fig_afdc_kl' => $bar_fig_afdc_kl15,
+					'bar_fig_afdc_kl15' => $ship_rec_kl,
+					'ship_rec_kl' => $ship_rec_kl15
+				));
+			break;
+			default : 
+			break;
+		}
 	}
 
 	public function logout() {
