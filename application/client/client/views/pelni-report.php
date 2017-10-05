@@ -21,6 +21,7 @@
                             <h4 class="panel-title">Pelni Report</h4>
                         </div>
                         <div class="panel-body">
+                        <div class="table-responsive">
     <!-- begin row -->
             <div class="row">
                 <div class="col-md-12">
@@ -194,6 +195,8 @@
                 <!-- end panel -->
                 </div>
                 <!-- end col-12 -->
+            </div>
+
             </div>
             <!-- end row -->
             </div>
