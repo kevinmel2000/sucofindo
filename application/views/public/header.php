@@ -128,12 +128,15 @@
                                                 </ul>
                                             </li>
                                             <li class="container3d relative f_xs_none m_xs_bottom_5">
-                                                <a class="color_dark fs_large relative r_xs_corners" href="javascript:;">Klien
+                                                <a class="color_dark fs_large relative r_xs_corners" href="javascript:;">Log In
                                                     <i class="icon-angle-down d_inline_m"></i>
                                                 </a>
                                                 <ul class="sub_menu r_xs_corners bg_light vr_list tr_all tr_xs_none trf_xs_none bs_xs_none d_xs_none">
                                                     <li>
-                                                        <a href="<?php echo base_url(); ?>index.php/v1/page/client-room/" class="d_block color_dark relative">Client Room</a>
+                                                        <a href="<?php echo base_url(); ?>index.php/v1/page/client-room/" class="d_block color_dark relative">Client</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="<?php echo base_url(); ?>index.php/v1/page/client-room/" class="d_block color_dark relative">Admin</a>
                                                     </li>
                                                 </ul>
                                             </li>
