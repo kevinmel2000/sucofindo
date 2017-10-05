@@ -184,7 +184,7 @@
 									<li><a href="<?php echo base_url(); ?>index.php/user">User Management</a></li>
 									<li><a href="<?php echo base_url(); ?>index.php/function_access/">Function Access</a></li>
 									<li><a href="<?php echo base_url(); ?>index.php/inquiry_access/">Inquiry Access</a></li>
-									<li><a href="<?php echo base_url(); ?>index.php/projcat/">Menu Management</a></li>
+									<li><a href="<?php echo base_url(); ?>index.php/menu/">Menu Management</a></li>
 								</ul>
 							</li>
 							<li class="has-sub">
@@ -216,7 +216,7 @@
 									<li><a href="<?php echo base_url(); ?>index.php/vessel/">Vessel</a></li>
 									<li><a href="<?php echo base_url(); ?>index.php/bunker/">Barge</a></li>
 									<li><a href="<?php echo base_url(); ?>index.php/port/">Port</a></li>
-									<li><a href="<?php echo base_url(); ?>index.php/projcat/">Project Category</a></li>
+									<li><a href="<?php echo base_url(); ?>index.php/project_category/">Project Category</a></li>
 									<li><a href="<?php echo base_url(); ?>index.php/project/">Project</a></li>
 								</ul>
 							</li>
