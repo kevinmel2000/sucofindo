@@ -136,7 +136,7 @@
                                                         <a href="<?php echo base_url(); ?>index.php/v1/page/client-room/" class="d_block color_dark relative">Client</a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php echo base_url(); ?>index.php/v1/page/client-room/" class="d_block color_dark relative">Admin</a>
+                                                        <a href="<?php echo base_url(); ?>index.php/login" class="d_block color_dark relative">Admin</a>
                                                     </li>
                                                 </ul>
                                             </li>
