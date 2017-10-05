@@ -1,15 +1,28 @@
-		<!-- begin #content -->
-		<div id="content" class="content" style="min-width:3000px;">
-			<!-- begin breadcrumb -->
-			<?php echo (isset($breadcrumb) ? $breadcrumb : ""); ?>
-			<!-- end breadcrumb -->
-			<!-- begin page-header -->
-			<h1 class="page-header">Report <small>General Report Data</small></h1>
-			<!-- end page-header -->
+<!-- begin #content -->
+<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li><a href="javascript:;">Home</a></li>
+        <li class="active">General Form</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">General Form <small>berisi form proyek</small></h1>
+    <!-- end page-header -->
 
-            <!-- begin front message -->
-            <?php echo (isset($front_message) ? $front_message : ""); ?>
-
+                    <div class="panel panel-inverse" data-sortable-id="index-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                            <h4 class="panel-title">Pelni Report</h4>
+                        </div>
+                        <div class="panel-body">
+                        <div class="table-responsive">
+    <!-- begin row -->
             <div class="row">
                 <div class="col-md-12">
                     <table>
@@ -183,6 +196,8 @@
                 </div>
                 <!-- end col-12 -->
             </div>
+
+            </div>
             <!-- end row -->
-        </div>
-		<!-- end #content -->
+            </div>
+</div>

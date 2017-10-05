@@ -168,6 +168,16 @@
 						    <span>Dashboard</span>
 					    </a>
 					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+					    <b class="caret pull-right"></b>
+					    <i class="fa fa-bar-chart"></i>
+					    <span>Report</span> 
+						</a>
+						<ul class="sub-menu">
+							<li><a href="<?php echo base_url(); ?>index.php/report/">Report</a></li>
+						</ul>
+					</li>
 					<li id="setting-form" class="has-sub">
 						<a href="javascript:;">
 						    <b class="caret pull-right"></b>
