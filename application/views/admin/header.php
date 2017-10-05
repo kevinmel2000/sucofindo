@@ -193,6 +193,7 @@
 							    <span>Website</span> 
 								</a>
 								<ul class="sub-menu">
+									<li><a href="<?php echo base_url(); ?>index.php/website_menu/">Menu</a></li>
 									<li><a href="<?php echo base_url(); ?>index.php/page_static/">Page Static</a></li>
 									<li><a href="<?php echo base_url(); ?>index.php/slider/">Slider</a></li>
 								</ul>
