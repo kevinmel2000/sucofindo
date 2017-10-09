@@ -1,13 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Dashboard extends CI_Controller 
+{
 
-	private $data;
+	private $data = array();
 
-	public function __construct() {
+	public function __construct() 
+	{
 		parent::__construct();
-		$this->load->model(array("Projcat_dao"));
+
+		//$this->load->model();
 		$this->load->library(array("Dynamic_menu"));
 
 		$this->data['html_css'] = '
@@ -37,19 +40,13 @@ class Dashboard extends CI_Controller {
 				});
 			</script>';	
 
-		$this->data['projcat'] = $this->Projcat_dao->get_all_items();
-		$this->data['menu']    = $this->dynamic_menu->buildMenu(0);
 	}
 
-	public function index(){ 
-		$this->template->view(
-			/* template view*/
-			array("admin/header","dashboard","admin/footer"), 
-			/* pass data */
-			array(
-				"title" => "Dashboard View",
-				"osess" => $this->session->userdata("osess")),
-			/* pass class data */
-			$this->data);
+	public function index()
+	{ 
+		$this->data['title'] = "Dashboard";
+		$this->load->view("admin/header",$this->data);
+		$this->load->view("dashboard", $this->data);
+		$this->load->view("admin/footer", $this->data);
 	}
 }

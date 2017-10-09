@@ -1,0 +1,1 @@
+inquiry_access_view

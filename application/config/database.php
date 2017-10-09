@@ -77,22 +77,22 @@ $db['default'] = array(
 	'dsn'	=> '',
 
 	//-----------------------------------------------
-	// heroku | comment if using localhost
+	// heroku PGSQL | comment if using localhost
 	//-----------------------------------------------	
-	'hostname' => 'sql12.freemysqlhosting.net',
-	'username' => 'sql12197381',
-	'password' => 'baPwd2N3s1',
-	'database' => 'sql12197381',
+	// 'hostname' => 'pgsql:host=ec2-54-163-237-25.compute-1.amazonaws.com;dbname=dhfmied3jr2nm',
+	// 'username' => 'cmhoaumxcxwzgr',
+	// 'password' => '3a5402e13283879f0babf84d0e1e58bb2eec5621e54797a7d6cb50028c5b3138',
+	// 'database' => 'dhfmied3jr2nm',
 
 	//-----------------------------------------------
-	// localhost | comment if using heroku
-	//-----------------------------------------------
-	// 'hostname' => 'localhost',
-	// 'username' => 'root',
-	// 'password' => '',
-	// 'database' => 'db_sucofindo',
+	// localhost PGSQL | comment if using localhost
+	//-----------------------------------------------	
+	'hostname' => 'pgsql:host=localhost;dbname=postgres',
+	'username' => 'postgres',
+	'password' => 'postgres',
+	'database' => 'postgres',
 
-	'dbdriver' => 'mysqli',
+	'dbdriver' => 'pdo',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),

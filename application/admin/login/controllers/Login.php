@@ -1,8 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
-	public function __construct() {
+class Login extends CI_Controller 
+{
+
+	public function __construct() 
+	{
 		parent::__construct();
 	}
 
@@ -15,18 +18,21 @@ class Login extends CI_Controller {
 			'hash' => $this->security->get_csrf_hash()
 		);
 
-		$this->load->view("login",$data);
+		$this->load->view("login_view",$data);
 	}
 
-	public function auth() {
+	public function auth() 
+	{
 
-		$this->load->model("login_dao");
+		$this->load->model("login_model");
 
 		/* Attempt sementara no limit */
 		$attempt = ((int) $this->session->userdata("attempt"))+1;
 
 		/* If attempt > 3 do something */
-		if($attempt > 3) { /* do something */}
+		if($attempt > 3) { 
+			/* do something */
+		}
 
 		$this->session->set_userdata("attempt",$attempt);
 
@@ -39,7 +45,7 @@ class Login extends CI_Controller {
 		$this->form_validation->set_rules('ps', 'Password', 'trim|required|min_length[5]|max_length[12]');
 
 		/* Form validation */
-		if ($this->form_validation->run() == FALSE) {
+		if ($this->form_validation->run() == FALSE)  {
 
 			$this->session->set_userdata("attempt",1);
 			$this->session->set_flashdata('login_message', '<i class="fa fa-info-circle"></i> Username or password incorrect, please try again!');
@@ -48,20 +54,22 @@ class Login extends CI_Controller {
 		} else {
 
 			/* checking database */
-			$result_login = $this->login_dao->user_check($username,$password);
+			$result_login = $this->login_model->user_check($username,$password);
 			if($result_login->num_rows > 0) {
 
 				foreach($result_login->result as $row) {
+
 					$o = new stdClass();
-					$o->username = $row->username;
-					$o->firstname = $row->firstname;
-					$o->lastname = $row->lastname;
-					$o->email = $row->email;
-					$o->phone_number =  $row->phone_number;
-					$o->photo = $row->photo;
-					$o->created_date = $row->created_date;
-					$o->modified_date = $row->modified_date;
-					$o->active = $row->active;
+					$o->username        = $row->USERNAME;
+					$o->firstname       = $row->FIRST_NAME;
+					$o->lastname        = $row->LAST_NAME;
+					$o->email           = $row->EMAIL;
+					$o->phone_number    = $row->PHONE;
+					$o->photo           = $row->PHOTO;
+					$o->status          = $row->STATUS;
+					$o->function_access = $row->FUNCTION_ACCESS;
+					$o->inquiry_access  = $row->INQUIRY_ACCESS;
+
 					$this->session->set_userdata("osess",$o);
 				}
 

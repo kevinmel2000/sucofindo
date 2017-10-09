@@ -25,10 +25,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 // using heroku cloud
-$config['base_url'] = 'https://sucofindo.herokuapp.com/';
+// $config['base_url'] = 'https://sucofindo.herokuapp.com/';
 
 // using localhost xenialos
-//$config['base_url'] = 'http://localhost/sucofindo/';
+$config['base_url'] = 'http://localhost/sucofindo/';
 
 $config['admin_folder'] = 'admin';
 
@@ -449,7 +449,14 @@ $config['global_xss_filtering'] = TRUE;
 | 'csrf_regenerate' = Regenerate token on every submission
 | 'csrf_exclude_uris' = Array of URIs which ignore CSRF checks
 */
-$config['csrf_protection'] = TRUE;
+
+$config['csrf_protection'] 	= TRUE;
+
+/* if not menu controller set csrf=true */
+if (stripos($_SERVER["REQUEST_URI"],'/menu/')) {
+	$config['csrf_protection'] 	= FALSE;
+}
+
 $config['csrf_token_name'] = 'csrf_monitor';
 $config['csrf_cookie_name'] = 'csrf_cookie_monitor';
 $config['csrf_expire'] = 7200;

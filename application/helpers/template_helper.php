@@ -1,17 +1,14 @@
 <?php 
-function getSetting($setting_name) {
+
+/**
+ * Fungsi untuk mengambil setting template
+ */
+function get_setting($setting_name) 
+{
 	$CI =& get_instance();
-	$CI->db->select('setting_value');
-	$CI->db->from('setting');
-	$CI->db->where('setting_name', $setting_name); 
-	$query = $CI->db->get();
+	$CI->load->model("Setting_model");
+	return $CI->Setting_model->get_item($setting_name);
+} 
 
-	$result = "";
-	foreach ($query->result() as $row)
-	{
-	    $result = $row->setting_value;
-	}
 
-	return $result;
-}
 ?>

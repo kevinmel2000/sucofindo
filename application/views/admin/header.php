@@ -42,7 +42,7 @@
 			<div class="container-fluid">
 				<!-- begin mobile sidebar expand / collapse button -->
 				<div class="navbar-header">
-					<a href="<?php echo base_url(); ?>" class="navbar-brand"><img src="<?php echo getSetting('logo_image'); ?>" width="<?php echo getSetting('logo_width'); ?>" height="<?php echo getSetting('logo_height'); ?>" /></a>
+					<a href="<?php echo base_url(); ?>" class="navbar-brand"><img src="<?php echo get_setting('logo_image'); ?>" width="<?php echo get_setting('logo_width'); ?>" height="<?php echo get_setting('logo_height'); ?>" /></a>
 					<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
