@@ -52,7 +52,7 @@
 								<td><?php echo form_input(array('id' => 'target','type' => 'text', 'name' => 'target','class' => 'form-control')); ?></td>
 							</tr>
 							<tr>
-								<td width="150px" style="padding-top:15px;"><?php echo form_label('Image') ?></td>
+								<td width="150px" style="padding-top:15px;"><?php echo form_label('Image URL') ?></td>
 								<td><?php echo form_input(array('id' => 'image','type' => 'text', 'name' => 'image','class' => 'form-control')); ?></td>
 							</tr>
 							<tr>
@@ -64,6 +64,9 @@
 								<td>
 									<?php echo form_dropdown('show', array(1 => 'Yes', 0 => 'No'), '', 'id="show" class="form-control"'); ?>
 								</td>
+							</tr>
+							<tr style="display: none;">
+								<td colspan="2"><?php echo form_input(array('type' => 'hidden', 'name' => $csrf['name'],'value' => $csrf['hash'],'class' => 'form-control','required' => 'required')); ?></td>
 							</tr>
 							<tr>
 								<td colspan="2">

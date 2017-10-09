@@ -62,24 +62,74 @@ class Menu extends CI_Controller
 	public function edit($id)
 	{
 		$this->data['title'] = "Form Edit Menu";
+		$this->data['item']  = $this->Menu_model->get_item_by_menu_id($id);
+		$this->data['id']    = $id;
 		$this->load->view('admin/header',$this->data);
-		$this->load->view('menu_add_view',$this->data);
+		$this->load->view('menu_edit_view',$this->data);
 		$this->load->view('admin/footer',$this->data);
 	}
 
 	public function save()
 	{
+		$reference = $this->input->post("reference");
+		$title     = $this->input->post("title");
+		$url       = $this->input->post("url");
+		$remark    = $this->input->post("remark");
+		$target    = $this->input->post("target");
+		$image     = $this->input->post("image");
+		$weight    = $this->input->post("weight");
+		$show      = $this->input->post("show");
 
+		$array_col_val = array(
+			'REFERENCE'   => empty($reference) ? 0 : $reference,
+			'TITLE'       => $title,
+			'URL'         => $url,
+			'REMARK'      => $remark,
+			'TARGET'      => $target,
+			'IMAGE'       => $image,
+			'WEIGHT'      => $weight,
+			'SHOW'        => $show,
+			'IS_DELETE'   => 0,
+			'CREATE_TIME' => null,
+			'CREATE_USER' => ''
+		);
+		$this->Menu_model->save($array_col_val);
+
+		redirect("menu");
 	}
 
 	public function delete($id)
 	{
-
+		$this->Menu_model->delete_by_id($id);
+		redirect('menu');
 	}
 
 	public function update($id)
 	{
+		$reference = $this->input->post("reference");
+		$title     = $this->input->post("title");
+		$url       = $this->input->post("url");
+		$remark    = $this->input->post("remark");
+		$target    = $this->input->post("target");
+		$image     = $this->input->post("image");
+		$weight    = $this->input->post("weight");
+		$show      = $this->input->post("show");
 
+		$array_col_val = array(
+			'REFERENCE'   => empty($reference) ? 0 : $reference,
+			'TITLE'       => $title,
+			'URL'         => $url,
+			'REMARK'      => $remark,
+			'TARGET'      => $target,
+			'IMAGE'       => $image,
+			'WEIGHT'      => $weight,
+			'SHOW'        => $show,
+			'IS_DELETE'   => 0,
+			'MODIFY_TIME' => null,
+			'MODIFY_USER' => ''
+		);
+		$this->Menu_model->update($array_col_val,$id);
+		redirect('menu');
 	}
 
 	public function list_menu_ref_rest()
@@ -151,12 +201,12 @@ class Menu extends CI_Controller
 				if($row_menu_ref->MENU_LEVEL <= 2) {
 					$json_object->function = '
 						<button type="button" class="btn btn-primary btn-xs button-edit" onClick="window.location.href=\''.base_url().'index.php/menu/create/'.$row_menu_ref->MENU_ID.'\'"<i class="glyphicon glyphicon-plus"></i> Add</button> 
-						<button type="button" class="btn btn-primary btn-xs button-edit" onClick="window.location.href=\''.base_url().'index.php/menu/create/'.$row_menu_ref->MENU_ID.'\'"><i class="glyphicon glyphicon-edit"></i> Edit</button>  
-						<button type="button" class="btn btn-primary btn-xs button-delete" onClick="if (confirm(\'Are you sure you want to delete this data?\')) window.location.href=\''.base_url().'index.php/menu/delete/'.$row_menu_ref->MENU_ID.'\'><i class="glyphicon glyphicon-remove"></i> Delete</button>';
+						<button type="button" class="btn btn-primary btn-xs button-edit" onClick="window.location.href=\''.base_url().'index.php/menu/edit/'.$row_menu_ref->MENU_ID.'\'"><i class="glyphicon glyphicon-edit"></i> Edit</button>  
+						<button type="button" class="btn btn-primary btn-xs button-delete" onClick="if (confirm(\'Are you sure you want to delete this data?\')) window.location.href=\''.base_url().'index.php/menu/delete/'.$row_menu_ref->MENU_ID.'\'"><i class="glyphicon glyphicon-remove"></i> Delete</button>';
 				} else {
 					$json_object->function = '
-						<button type="button" class="btn btn-primary btn-xs button-edit" onClick="window.location.href=\''.base_url().'index.php/menu/create/'.$row_menu_ref->MENU_ID.'\'"><i class="glyphicon glyphicon-edit"></i> Edit</button>  
-						<button type="button" class="btn btn-primary btn-xs button-delete" onClick="if (confirm(\'Are you sure you want to delete this data?\')) window.location.href=\''.base_url().'index.php/menu/delete/'.$row_menu_ref->MENU_ID.'\'><i class="glyphicon glyphicon-remove"></i> Delete</button>';
+						<button type="button" class="btn btn-primary btn-xs button-edit" onClick="window.location.href=\''.base_url().'index.php/menu/edit/'.$row_menu_ref->MENU_ID.'\'"><i class="glyphicon glyphicon-edit"></i> Edit</button>  
+						<button type="button" class="btn btn-primary btn-xs button-delete" onClick="if (confirm(\'Are you sure you want to delete this data?\')) window.location.href=\''.base_url().'index.php/menu/delete/'.$row_menu_ref->MENU_ID.'\'"><i class="glyphicon glyphicon-remove"></i> Delete</button>';
 				}
 
 				$json_array[] = $json_object;
