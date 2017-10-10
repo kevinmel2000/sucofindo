@@ -30,10 +30,10 @@
                 <div class="panel-body">
 					<form id="userRegisterForm" method="post" action="<?php echo base_url(); ?>index.php/menu/save/">
 
-						<table class="table table-striped">
+						<table class="table table-striped table-bordered">
 							<tr>
-								<td width="150px" style="padding-top:15px;"><?php echo form_label('Reference') ?></td>
-								<td><?php echo form_input(array('type' => 'text','style'=>'width: 100%; height: 35px;', 'name' => 'reference','class' => 'easyui-combotree form-control', 'data-options' => 'url:\''.base_url().'index.php/menu/list_menu_ref_rest\',method:\'get\',label:\'Select Menu Reference\',labelPosition:\'top\',value:\''.@$reference.'\'')); ?></td>
+								<td width="150px" style="padding-top:15px;"><?php echo form_label('Reference'); ?></td>
+								<td><?php echo form_input(array('type' => 'text','style'=>'width: 100%; height: 35px;', 'name' => 'reference','class' => 'easyui-combotree form-control', 'data-options' => 'url:\''.base_url().'index.php/menu/list_menu_ref_rest\',method:\'get\',label:\'Select Menu Reference\',labelPosition:\'top\',value:\''.@$id.'\'')); ?></td>
 							</tr>
 							<tr>
 								<td width="150px" style="padding-top:15px;"><?php echo form_label('Title') ?></td>
@@ -52,7 +52,7 @@
 								<td><?php echo form_input(array('id' => 'target','type' => 'text', 'name' => 'target','class' => 'form-control')); ?></td>
 							</tr>
 							<tr>
-								<td width="150px" style="padding-top:15px;"><?php echo form_label('Image URL') ?></td>
+								<td width="150px" style="padding-top:15px;"><?php echo form_label('Font Icon') ?></td>
 								<td><?php echo form_input(array('id' => 'image','type' => 'text', 'name' => 'image','class' => 'form-control')); ?></td>
 							</tr>
 							<tr>

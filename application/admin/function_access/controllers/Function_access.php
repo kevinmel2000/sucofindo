@@ -15,12 +15,13 @@ class Function_access extends CI_Controller
 			<link href="'.base_url().'assets/admin/color-admin/assets/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
 			<link href="'.base_url().'assets/admin/color-admin/assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" />
     		<link href="'.base_url().'assets/admin/color-admin/assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
-    		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    		<link href="'.base_url().'assets/admin/plugins/easyui/themes/bootstrap/easyui.css" rel="stylesheet" />
-    		<link href="'.base_url().'assets/admin/plugins/easyui/themes/bootstrap/icon.css" rel="stylesheet" />';
+    		<link href="'.base_url().'assets/admin/color-admin/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" />
+    		<link href="'.base_url().'assets/admin/plugins/easyui/themes/black/easyui.css" rel="stylesheet" />
+    		<link href="'.base_url().'assets/admin/plugins/easyui/themes/icon.css" rel="stylesheet" />
+    		<link href="'.base_url().'assets/admin/plugins/easyui/themes/color.css" rel="stylesheet" />';
 
     	$this->data['html_js'] = '
-    		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    		<script src="'.base_url().'assets/admin/color-admin/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 			<script src="'.base_url().'assets/admin/color-admin/assets/plugins/gritter/js/jquery.gritter.js"></script>
 			<script src="'.base_url().'assets/admin/color-admin/assets/plugins/flot/jquery.flot.min.js"></script>
 			<script src="'.base_url().'assets/admin/color-admin/assets/plugins/flot/jquery.flot.time.min.js"></script>
@@ -32,7 +33,6 @@ class Function_access extends CI_Controller
 			<script src="'.base_url().'assets/admin/color-admin/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 			<script src="'.base_url().'assets/admin/color-admin/assets/js/dashboard.min.js"></script>
 			<script src="'.base_url().'assets/admin/color-admin/assets/js/apps.min.js"></script>
-
 			<script src="'.base_url().'assets/admin/plugins/easyui/jquery.easyui.min.js"></script>
 			<script>
 
@@ -70,6 +70,25 @@ class Function_access extends CI_Controller
 					});
 					return result;
 				});
+
+				function newFunctionAccess()
+				{
+					window.open("'.base_url().'index.php/function_access/add","_self");
+				}
+
+				function editFunctionAccess()
+				{
+					var row = $("#dg").datagrid("getSelected");
+					window.open("'.base_url().'index.php/function_access/edit/"+row.GROUP_ID,"_self");
+				}
+
+				function destroyFunctionAccess()
+				{
+					if(confirm("Are you sure ?")) {
+						var row = $("#dg").datagrid("getSelected");
+						window.open("'.base_url().'index.php/function_access/delete/"+row.GROUP_ID,"_self");
+					}
+				}
 
 			</script>';	
 		$this->data['csrf'] = array(
@@ -287,8 +306,8 @@ class Function_access extends CI_Controller
 				$json_object->edit   = "<input id='edit_".$row_menu->MENU_ID."' type='checkbox' name='Editpriv[]' value='".$row_menu->MENU_ID."' ".$edit_priv."/>";
 				$json_object->delete = "<input id='delete_".$row_menu->MENU_ID."' type='checkbox' name='Deletepriv[]' value='".$row_menu->MENU_ID."' ".$delete_priv."/>";
 			
-				$json_object->checkrow   = "<a href=javascript:; onClick=\"check_row('".$row_menu->MENU_ID."')\"><i class=\"fa fa-check\"></i></a>"; 
-				$json_object->uncheckrow = "<a href=javascript:; onClick=\"uncheck_row('".$row_menu->MENU_ID."')\"><i class=\"fa fa-times\"></i></a>"; 
+				$json_object->checkrow   = "<a style='color:#fff;' href=javascript:; onClick=\"check_row('".$row_menu->MENU_ID."')\"><i class=\"fa fa-check\"></i></a>"; 
+				$json_object->uncheckrow = "<a style='color:#fff;' href=javascript:; onClick=\"uncheck_row('".$row_menu->MENU_ID."')\"><i class=\"fa fa-times\"></i></a>"; 
 
 				$json_array[] = $json_object;
 			}
@@ -296,5 +315,15 @@ class Function_access extends CI_Controller
 			header('Content-Type: application/json');
 			echo json_encode($json_array);
 		}
+	}
+
+	public function function_access_list_rest()
+	{
+		$query = $this->User_group_model->get_all_items(100,0);
+		$json_object = new stdClass();
+		$json_object->total = @$query->num_rows();
+		$json_object->rows  = @$query->result();
+		header('Content-Type: application/json');
+		echo json_encode($json_object);
 	}
 }

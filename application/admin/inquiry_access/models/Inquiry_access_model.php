@@ -1,1 +1,0 @@
-Inquiry_access_model

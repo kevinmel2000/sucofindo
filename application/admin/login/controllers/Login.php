@@ -11,6 +11,9 @@ class Login extends CI_Controller
 
 	public function index()
 	{
+		/* Activate CSRF */
+		$this->security->csrf_verify();
+		
 		$data = array();
 		$data['error_message'] = $this->session->flashdata('login_message');
 		$data['csrf'] = array(

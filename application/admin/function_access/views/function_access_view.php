@@ -28,30 +28,21 @@
                     <h4 class="panel-title">Function Access - Table</h4>
                 </div>
                 <div class="panel-body" style="overflow-x: hidden;">
-                	<table class="table table-striped">
-                		<tr>
-                			<th>No</th>
-                			<th>Group Name</th>
-                			<th>Function</th>
-                		</tr>
-                		<?php 
-                		$no = 1;
-                		if($all_items->num_rows() > 0) :
-                		foreach($all_items->result() as $row) : 
-                		?>
-                		<tr>
-                		<td><?php echo $no; ?></td>
-                		<td><?php echo $row->GROUP_NAME; ?></td>
-                		<td>
-                			<a href="<?php echo base_url(); ?>index.php/function_access/edit/<?php echo $row->GROUP_ID; ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a>
-                			<a onclick="return confirm('are you sure ?')" href="<?php echo base_url(); ?>index.php/function_access/delete/<?php echo $row->GROUP_ID; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i> Delete</a>
-                		</td>
-                		</tr>
-                		<?php 
-                		$no++;
-                		endforeach;
-                		endif; ?>
-                	</table>
+                    <table id="dg" class="easyui-datagrid" style="width:100%;min-height:400px"
+                            url="<?php echo base_url(); ?>index.php/function_access/function_access_list_rest"
+                            toolbar="#toolbar" pagination="true"
+                            rownumbers="true" fitColumns="true" singleSelect="true">
+                        <thead>
+                            <tr>
+                                <th field="GROUP_NAME" width="30">Group Name</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div id="toolbar">
+                        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newFunctionAccess()">Add</a>
+                        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editFunctionAccess()">Edit</a>
+                        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyFunctionAccess()">Remove</a>
+                    </div>
                 </div>
             </div>
         </div>

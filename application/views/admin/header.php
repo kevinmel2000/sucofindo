@@ -37,12 +37,12 @@
 	<!-- begin #page-container -->
 	<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
 		<!-- begin #header -->
-		<div id="header" class="header navbar navbar-default navbar-fixed-top">
+		<div id="header" class="header navbar navbar-inverse navbar-fixed-top">
 			<!-- begin container-fluid -->
 			<div class="container-fluid">
 				<!-- begin mobile sidebar expand / collapse button -->
 				<div class="navbar-header">
-					<a href="<?php echo base_url(); ?>" class="navbar-brand"><img src="<?php echo get_setting('logo_image'); ?>" width="<?php echo get_setting('logo_width'); ?>" height="<?php echo get_setting('logo_height'); ?>" /></a>
+					<a href="<?php echo base_url(); ?>" class="navbar"><img style="display:none;" src="<?php echo get_setting('logo_image'); ?>" width="<?php echo get_setting('logo_width'); ?>" height="<?php echo get_setting('logo_height'); ?>" /></a>
 					<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>

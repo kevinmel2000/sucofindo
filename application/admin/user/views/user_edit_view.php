@@ -32,7 +32,7 @@
                 	<br />
                 	<?php 
                 	echo form_open_multipart('user/update/'.@$id,array('id' => 'form_add')); ?>
-					<table class="table table-striped">
+					<table class="table table-striped table-bordered">
 						<tr>
 							<td width="150px" style="padding-top:15px;"><?php echo form_label('Username*') ?></td>
 							<td><?php echo form_input(array('type' => 'text','value' => @$item->result()[0]->USERNAME, 'name' => 'username','class' => 'form-control','required' => 'required')); ?></td>

@@ -28,47 +28,28 @@
                     <h4 class="panel-title">User Management - Table</h4>
                 </div>
                 <div class="panel-body" style="overflow-x: hidden;">
-                	<table class="table table-striped">
-                		<tr>
-                			<th>No</th>
-                            <th>Photo</th>
-                			<th>Username</th>
-                			<th>Email</th>
-                			<th>Firstname</th>
-                			<th>Lastname</th>
-                			<th>Status (Active)</th>
-                			<th>Function</th>
-                		</tr>
-                		<?php 
-                		$no = 1;
-                		if($all_items->num_rows() > 0) :
-                		foreach($all_items->result() as $row) : 
-                		?>
-                		<tr>
-                		<td><?php echo $no; ?></td>
-                        <td><?php echo img(array('style' => 'border-radius:4px;','height' => '50px', 'width' =>'45px', 'src' => base_url().'uploads/profile/'.$row->PHOTO)); ?></td>
-                        <td>
-                            <?php echo $row->USERNAME; ?> 
-                        </td>
-                        <td><?php echo $row->EMAIL; ?></td>
-                        <td><?php echo $row->FIRST_NAME; ?></td>
-                        <td><?php echo $row->LAST_NAME; ?></td>
-                        <td><?php echo $row->STATUS; ?></td>
-                		<td>
-                			<a href="<?php echo base_url(); ?>index.php/user/edit/<?php echo $row->USR_ID; ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</a>
-                            <?php if($row->STATUS == 'Y') : ?>
-                            <a onclick="return confirm('are you sure ?')" href="<?php echo base_url(); ?>index.php/user/suspend/<?php echo $row->USR_ID; ?>" class="btn btn-warning btn-sm"><i class="fa fa-hand-paper-o"></i> Suspend</a>
-                			<?php elseif ($row->STATUS == 'N') : ?>
-                            <a onclick="return confirm('are you sure ?')" href="<?php echo base_url(); ?>index.php/user/release/<?php echo $row->USR_ID; ?>" class="btn btn-success btn-sm"><i class="fa fa-hand-paper-o"></i> Release</a>
-                            <?php endif; ?>
-                            <a onclick="return confirm('are you sure ?')" href="<?php echo base_url(); ?>index.php/user/delete/<?php echo $row->USR_ID; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i> Delete</a>
-                		</td>
-                		</tr>
-                		<?php 
-                		$no++;
-                		endforeach;
-                		endif; ?>
-                	</table>
+
+                    <table id="dg" class="easyui-datagrid" style="width:100%;min-height:400px"
+                            url="<?php echo base_url(); ?>index.php/user/user_list_rest"
+                            toolbar="#toolbar" pagination="true"
+                            rownumbers="true" fitColumns="true" singleSelect="true">
+                        <thead>
+                            <tr>
+                                <th field="USERNAME" width="30">Username</th>
+                                <th field="EMAIL" width="30">Email</th>
+                                <th field="FIRST_NAME" width="20">Firstname</th>
+                                <th field="LAST_NAME" width="20">Lastname</th>
+                                <th field="STATUS" width="20" align="center">Status (Active)</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div id="toolbar">
+                        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">Add</a>
+                        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">Edit</a>
+                        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">Remove</a>
+                        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-lock" plain="true" onclick="lockUser()">Suspend</a>
+                        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" plain="true" onclick="releaseUser()">Release</a>
+                    </div>
                 </div>
             </div>
         </div>

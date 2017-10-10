@@ -13,12 +13,13 @@ class User extends CI_Controller
 			<link href="'.base_url().'assets/admin/color-admin/assets/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
 			<link href="'.base_url().'assets/admin/color-admin/assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" />
     		<link href="'.base_url().'assets/admin/color-admin/assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
-    		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    		<link href="'.base_url().'assets/admin/plugins/easyui/themes/bootstrap/easyui.css" rel="stylesheet" />
-    		<link href="'.base_url().'assets/admin/plugins/easyui/themes/bootstrap/icon.css" rel="stylesheet" />';
+    		<link href="'.base_url().'assets/admin/color-admin/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" />
+    		<link href="'.base_url().'assets/admin/plugins/easyui/themes/black/easyui.css" rel="stylesheet" />
+    		<link href="'.base_url().'assets/admin/plugins/easyui/themes/icon.css" rel="stylesheet" />
+    		<link href="'.base_url().'assets/admin/plugins/easyui/themes/color.css" rel="stylesheet" />';
 
     	$this->data['html_js'] = '
-    		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    		<script src="'.base_url().'assets/admin/color-admin/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 			<script src="'.base_url().'assets/admin/color-admin/assets/plugins/gritter/js/jquery.gritter.js"></script>
 			<script src="'.base_url().'assets/admin/color-admin/assets/plugins/flot/jquery.flot.min.js"></script>
 			<script src="'.base_url().'assets/admin/color-admin/assets/plugins/flot/jquery.flot.time.min.js"></script>
@@ -30,13 +31,42 @@ class User extends CI_Controller
 			<script src="'.base_url().'assets/admin/color-admin/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 			<script src="'.base_url().'assets/admin/color-admin/assets/js/dashboard.min.js"></script>
 			<script src="'.base_url().'assets/admin/color-admin/assets/js/apps.min.js"></script>
-
 			<script src="'.base_url().'assets/admin/plugins/easyui/jquery.easyui.min.js"></script>
 			<script>
-
 				$(document).ready(function() {
 					App.init();
 				});
+
+				function newUser()
+				{
+					window.open("'.base_url().'index.php/user/add","_self");
+				}
+
+				function editUser()
+				{
+					var row = $("#dg").datagrid("getSelected");
+					window.open("'.base_url().'index.php/user/edit/"+row.USR_ID,"_self");
+				}
+
+				function destroyUser()
+				{
+					if(confirm("Are you sure ?")) {
+						var row = $("#dg").datagrid("getSelected");
+						window.open("'.base_url().'index.php/user/delete/"+row.USR_ID,"_self");
+					}
+				}
+
+				function lockUser()
+				{
+					var row = $("#dg").datagrid("getSelected");
+					window.open("'.base_url().'index.php/user/suspend/"+row.USR_ID,"_self");
+				}
+
+				function releaseUser()
+				{
+					var row = $("#dg").datagrid("getSelected");
+					window.open("'.base_url().'index.php/user/release/"+row.USR_ID,"_self");
+				}
 			</script>';	
 		$this->data['csrf'] = array(
 			'name' => $this->security->get_csrf_token_name(),
@@ -200,5 +230,15 @@ class User extends CI_Controller
 		);
 		$this->User_model->update($array_col_val,$id);
 		redirect('user');	
+	}
+
+	public function user_list_rest()
+	{
+		$query = $this->User_model->get_all_items(100,0);
+		$json_object = new stdClass();
+		$json_object->total = @$query->num_rows();
+		$json_object->rows  = @$query->result();
+		header('Content-Type: application/json');
+		echo json_encode($json_object);
 	}
 }

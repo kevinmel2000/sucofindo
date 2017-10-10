@@ -4,7 +4,7 @@
 	<?php echo (isset($breadcrumb) ? $breadcrumb : ""); ?>
 	<!-- end breadcrumb -->
 	<!-- begin page-header -->
-	<h1 class="page-header">Page Inquiry Access Management <small>Function to create inquiry access</small></h1>
+	<h1 class="page-header">Page Static Management <small>Function to create page static</small></h1>
 	<!-- end page-header -->
 
     <!-- begin front message -->
@@ -25,7 +25,7 @@
                         <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
                         <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
                     </div>
-                    <h4 class="panel-title">Page Inquiry Access Management - Table</h4>
+                    <h4 class="panel-title">Page Static Management - Table</h4>
                 </div>
                 <div class="panel-body">
 				    <table id="dg" class="easyui-datagrid" style="width:100%;min-height:400px"
@@ -34,7 +34,9 @@
 				            rownumbers="true" fitColumns="true" singleSelect="true">
 				        <thead>
 				            <tr>
-				                <th field="page_title" width="30">Inquiry Access Name</th>
+				                <th field="page_title" width="30">Page Title</th>
+				                <th field="url" width="30">URL Page</th>
+				                <th field="status" align="center" width="20">Status</th>
 				                <th field="function" width="20" >Function</th>
 				            </tr>
 				        </thead>

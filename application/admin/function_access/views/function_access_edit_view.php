@@ -26,7 +26,7 @@
                     </div>
                     <h4 class="panel-title">Function Access - Table</h4>
                 </div>
-                <div class="panel-body" style="overflow-x: hidden;">
+                <div class="panel-body" style="background:#f1f1f1;overflow-x: hidden;">
                 	<br />
 						<form id="form_function_access_edit" class="form-horizontal" method="post" action="<?php echo base_url(); ?>index.php/function_access/update/<?php echo $group_id; ?>">
 
@@ -46,7 +46,7 @@
 
 								</div>
 							</div>
-							<div class="form-group" style="background: #f1f1f1;">
+							<div class="form-group">
 								<label class="control-label col-xs-2" for="fullname">Tree Menu
 									* </label>
 								<div class="col-xs-9">

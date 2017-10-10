@@ -4,7 +4,7 @@
 	<?php echo (isset($breadcrumb) ? $breadcrumb : ""); ?>
 	<!-- end breadcrumb -->
 	<!-- begin page-header -->
-	<h1 class="page-header">Menu Management <small>Function to edit menu</small></h1>
+	<h1 class="page-header">Website Menu Management <small>Function to edit website menu</small></h1>
 	<!-- end page-header -->
 
     <!-- begin front message -->
@@ -19,7 +19,7 @@
             <div class="panel panel-inverse">
                 <div class="panel-heading">
                     <div class="panel-heading-btn">
-                    	<a href="<?php echo base_url(); ?>index.php/menu/add" class="btn btn-xs btn-icon btn-circle btn-primary" ><i class="fa fa-plus"></i></a>
+                    	<a href="<?php echo base_url(); ?>index.php/website_menu/add" class="btn btn-xs btn-icon btn-circle btn-primary" ><i class="fa fa-plus"></i></a>
                         <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
                         <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
                         <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
@@ -28,12 +28,12 @@
                     <h4 class="panel-title">Menu Management - Table</h4>
                 </div>
                 <div class="panel-body">
-					<form id="userRegisterForm" method="post" action="<?php echo base_url(); ?>index.php/menu/update/<?php echo @$id; ?>">
+					<form id="userRegisterForm" method="post" action="<?php echo base_url(); ?>index.php/website_menu/update/<?php echo @$id; ?>">
 
 						<table class="table table-striped  table-bordered">
 							<tr>
 								<td width="150px" style="padding-top:15px;"><?php echo form_label('Reference') ?></td>
-								<td><?php echo form_input(array('type' => 'text','style'=>'width: 100%; height: 35px;', 'name' => 'reference','class' => 'easyui-combotree form-control', 'data-options' => 'url:\''.base_url().'index.php/menu/list_menu_ref_rest\',method:\'get\',label:\'Select Menu Reference\',labelPosition:\'top\',value:\''.@$item->result()[0]->REFERENCE.'\'')); ?></td>
+								<td><?php echo form_input(array('type' => 'text','style'=>'width: 100%; height: 35px;', 'name' => 'reference','class' => 'easyui-combotree form-control', 'data-options' => 'url:\''.base_url().'index.php/website_menu/list_menu_ref_rest\',method:\'get\',label:\'Select Menu Reference\',labelPosition:\'top\',value:\''.@$item->result()[0]->REFERENCE.'\'')); ?></td>
 							</tr>
 							<tr>
 								<td width="150px" style="padding-top:15px;"><?php echo form_label('Title') ?></td>
@@ -70,7 +70,7 @@
 							</tr>
 							<tr>
 								<td colspan="2">
-									<a href="<?php echo base_url(); ?>index.php/menu/" class="btn btn-primary btn-sm button-back">Back</a>
+									<a href="<?php echo base_url(); ?>index.php/website_menu/" class="btn btn-primary btn-sm button-back">Back</a>
 									<input type="submit" id="saveUser" class="btn btn-sm btn-primary"
 										value="Save" />
 								</td>

@@ -26,7 +26,7 @@
                     </div>
                     <h4 class="panel-title">Function Access - Table</h4>
                 </div>
-                <div class="panel-body" style="overflow-x: hidden;">
+                <div class="panel-body" style="background:#f1f1f1;overflow-x: hidden;">
                 	<br />
 						<form id="form_function_access_add" class="form-horizontal" method="post" action="<?php echo base_url(); ?>index.php/function_access/save">
 
